@@ -1,0 +1,31 @@
+button,
+input[type="button"],
+.Button {
+  background-color: $accent-green;
+  color: $white;
+  border: 0;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+  padding: $small-spacing $base-spacing;
+  margin-bottom: $small-spacing;
+  text-decoration: none;
+  display: inline-block;
+  @include transition(background-color $base-duration $base-timing);
+
+  &:hover,
+  &:focus {
+    background-color: $slight-green;
+  }
+}
+
+.Button {
+  &--light {
+    background-color: $white;
+    color: $accent-green;
+
+    &:hover,
+    &:focus {
+      background-color: $gray;
+    }
+  }
+}

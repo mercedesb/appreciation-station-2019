@@ -1,0 +1,189 @@
+$mobile-row-items: 1;
+$desktop-row-items: 6;
+$column-gap: 40px;
+
+.Grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat($mobile-row-items, 1fr);
+  column-gap: $column-gap;
+  row-gap: $small-spacing;
+  padding: 0 0 $base-mobile-spacing 0;
+
+  @include media($min-desktop) {
+    grid-template-columns: repeat($desktop-row-items, 1fr);
+    max-width: $desktop-text-width;
+    padding: 0 0 $large-spacing;
+  }
+
+  & + .Grid {
+    border-top: 1px solid $dark-gray;
+    padding-top: $base-spacing;
+
+    @include media($min-desktop) {
+      padding-top: $large-spacing;
+    }
+  }
+
+  & + .Grid--noBorder {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  & > .Grid {
+    padding-bottom: 0;
+  }
+
+  &--topSpacing {
+    padding-top: $base-spacing;
+    padding-bottom: $base-spacing;
+  }
+
+  &--scrollOnMobile {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .GridItem {
+      flex: 0 0 auto;
+    }
+
+    @include media($min-desktop) {
+      display: grid;
+    }
+  }
+
+  &--overlap {
+    margin-top: -$base-spacing;
+  }
+
+  &--noGap {
+    column-gap: 0;
+  }
+}
+
+.GridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media($min-desktop) {
+    display: block;
+  }
+
+  &--full {
+    @include media($min-desktop) {
+      grid-column-start: 2;
+      grid-column-end: span 4;
+    }
+  }
+
+  &--half {
+    z-index: 1;
+    @include media($min-desktop) {
+      grid-column-end: span $desktop-row-items / 2;
+    }
+
+    > img {
+      margin-bottom: $base-mobile-spacing;
+
+      @include media($min-desktop) {
+        margin-bottom: 0;
+      }
+    }
+
+    .Section-heading {
+      @include media($min-desktop) {
+        text-align: left;
+      }
+    }
+  }
+
+  &--third {
+    @include media($min-desktop) {
+      grid-column-end: span $desktop-row-items / 3;
+    }
+  }
+
+  &--twoThirds {
+    @include media($min-desktop) {
+      grid-column-end: span ($desktop-row-items / 3 * 2 + 1);
+    }
+  }
+}
+
+.Section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 0 $base-mobile-spacing;
+
+  @include media($min-desktop) {
+    width: 80%;
+    margin: 0 auto $base-mobile-spacing;
+  }
+
+  @include media($min-desktop) {
+    width: 100%;
+    margin: 0 0 $base-spacing;
+  }
+
+  &-heading {
+    z-index: 1;
+    margin: $base-spacing / 2 0 $base-mobile-spacing;
+    text-align: center;
+
+    @include media($min-tablet) {
+      margin: $base-mobile-spacing 0 $base-spacing;
+    }
+
+    @include media($min-desktop) {
+      margin: $large-spacing 0 $base-spacing;
+    }
+  }
+
+  &-image {
+    margin-top: $base-mobile-spacing;
+
+    @include media($min-desktop) {
+      margin-top: $large-spacing;
+    }
+  }
+
+  .Button {
+    margin-top: $base-mobile-spacing;
+
+    @include media($min-desktop) {
+      margin-top: $base-spacing;
+    }
+  }
+}
+
+.BackgroundHeading {
+  position: absolute;
+  top: 0;
+  width: 135%;
+  max-width: 1250px;
+
+  @include media($min-tablet) {
+    width: 100%;
+  }
+
+  &--extraSpacing + .Section-heading {
+    @include media($min-tablet) {
+      margin: $base-mobile-spacing 0 $base-spacing;
+    }
+
+    @include media($min-desktop) {
+      margin: $large-spacing 0;
+    }
+  }
+}

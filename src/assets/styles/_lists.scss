@@ -1,0 +1,22 @@
+ol,
+ul {
+  font-family: $sans-serif-font-family;
+  line-height: 1.5;
+  margin-bottom: $small-spacing;
+  padding-left: $small-spacing;
+  margin-left: $small-spacing / 2;
+  margin-top: 0;
+  width: 100%;
+
+  li {
+    margin-bottom: $small-spacing / 2;
+  }
+}
+
+ul {
+  list-style-type: disc;
+}
+
+ol {
+  list-style-type: decimal;
+}

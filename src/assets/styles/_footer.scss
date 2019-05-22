@@ -1,0 +1,95 @@
+$footer-spacing: 130px;
+
+.GlobalFooter {
+  background-color: $charcoal;
+  color: $white;
+  padding-top: $footer-spacing;
+  width: 100%;
+  text-align: center;
+  position: relative;
+
+  @include media($min-desktop) {
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .Grid {
+    padding-bottom: 0;
+  }
+
+  .BackgroundHeading {
+    z-index: 0;
+  }
+
+  .Section-heading {
+    z-index: 1;
+  }
+
+  ul {
+    list-style: none;
+    border-top: 3px solid $dark-gray;
+    display: flex;
+    justify-content: center;
+    margin: $small-spacing 0;
+    flex-direction: column;
+    text-align: center;
+    padding: $small-spacing 0 0;
+    width: initial;
+
+    @include media($min-desktop) {
+      flex-direction: row;
+    }
+
+    li {
+      margin: $small-spacing / 2 $base-spacing;
+      @include media($min-desktop) {
+        margin: $small-spacing $base-spacing;
+      }
+
+      a {
+        color: $white;
+        font-weight: $bold-font-weight;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.Copyright {
+  font-weight: $light-font-weight;
+  font-family: $sans-serif-font-family;
+  font-size: 16px;
+  padding: 0 $small-spacing $small-spacing;
+
+  @include media($min-desktop) {
+    padding-top: $small-spacing;
+  }
+}
+
+.social {
+  padding-left: 0;
+  li {
+    display: inline-block;
+    margin-left: 5px;
+  }
+
+  a {
+    @include transition(opacity 0.15s ease-in-out);
+    text-decoration: none;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus,
+    &:active {
+      opacity: 1;
+    }
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}

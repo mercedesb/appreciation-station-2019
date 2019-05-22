@@ -1,0 +1,159 @@
+body {
+  color: $base-font-color;
+  font-family: $serif-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  font-weight: $base-font-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: $base-font-weight;
+  line-height: $heading-line-height;
+  margin: $small-spacing 0;
+  font-family: $sans-serif-font-family;
+  font-weight: $bold-font-weight;
+  width: 100%;
+}
+
+h1,
+.h1 {
+  margin: $base-spacing 0;
+  font-family: $serif-font-family;
+  font-weight: $bold-font-weight;
+  line-height: 1.4;
+  font-size: $med-lg-font-size;
+
+  @include media($min-tablet) {
+    font-size: $giant-font-size;
+  }
+}
+
+h2,
+.h2 {
+  font-size: $med-font-size;
+
+  @include media($min-tablet) {
+    font-size: $large-font-size;
+  }
+}
+
+h3,
+.h3 {
+  font-size: $med-font-size;
+}
+
+h4,
+.h4 {
+  font-size: $med-font-size;
+  margin: $small-spacing 0 0;
+}
+
+h5,
+.h5,
+h6,
+.h6 {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0 0 $small-spacing;
+  width: 100%;
+}
+
+a:not(.Button),
+.Link {
+  color: $link-color;
+  text-decoration: none;
+  transition: color $base-duration $base-timing;
+
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: underline;
+    color: $slight-green;
+  }
+}
+
+.Link {
+  &--light {
+    color: $white !important;
+
+    &:active,
+    &:focus,
+    &:hover {
+      text-decoration: underline;
+      color: $gray;
+    }
+  }
+}
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
+
+code {
+  font-family: $mono-font-family;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: $mono-font-family;
+  margin: 0 0 $small-spacing;
+  background-color: $gray;
+  padding: $small-spacing 35px;
+
+  code {
+    line-height: 1.75em;
+  }
+}
+
+blockquote {
+  background-color: $light-yellow;
+  margin: 0 0 $small-spacing;
+  padding: $small-spacing 35px;
+  font-family: $mono-font-family;
+
+  p {
+    margin: 0;
+  }
+}
+
+strong {
+  font-weight: $bold-font-weight;
+  font-size: 1.2rem;
+}
+
+span {
+  font-family: $mono-font-family;
+}
+
+.Subtitle {
+  font-family: $sans-serif-font-family;
+  font-weight: $light-font-weight;
+  font-size: $base-font-size + 2;
+  margin-bottom: $small-spacing;
+
+  @include media($min-tablet) {
+    font-size: $med-font-size;
+  }
+}
+
+.Revisions {
+  font-size: $small-font-size;
+}

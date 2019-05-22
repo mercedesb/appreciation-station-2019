@@ -1,0 +1,76 @@
+$cover-spacing: 40px;
+
+.Cover {
+  color: $white;
+  // background-image: url("../../assets/images/Dev_TogetherCoverImageMobile.jpg");
+  margin-bottom: $large-spacing;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media($min-tablet) {
+    // background-image: url("../../assets/images/Dev_TogetherCoverImage.jpg");
+    /* Full height */
+    height: 100vh;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+  }
+
+  &-text {
+    text-align: center;
+    margin-top: $base-spacing;
+
+    @include media($min-desktop) {
+      max-width: $desktop-text-width;
+    }
+  }
+
+  &-title {
+    font-size: $base-font-size;
+    line-height: 1.5;
+
+    @include media($min-tablet) {
+      font-size: $med-lg-font-size;
+    }
+
+    @include media($min-desktop) {
+      font-size: $large-font-size;
+    }
+
+    margin-bottom: $cover-spacing;
+  }
+
+  &-subtitle {
+    display: none;
+
+    @include media($min-tablet) {
+      display: inline-block;
+    }
+
+    font-size: $med-font-size;
+    font-weight: $light-font-weight;
+    margin-bottom: $cover-spacing;
+  }
+
+  &-scroll {
+    display: none;
+
+    @include media($min-desktop) {
+      display: inline-block;
+    }
+
+    font-family: $mono-font-family;
+    margin-top: $cover-spacing * 2;
+  }
+
+  .Button {
+    margin-bottom: $base-spacing - $small-spacing;
+
+    @include media($min-desktop) {
+      margin-bottom: $small-spacing;
+    }
+  }
+}

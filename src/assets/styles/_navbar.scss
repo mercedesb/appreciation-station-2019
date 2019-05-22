@@ -1,0 +1,225 @@
+$mobile-logo-width: 170px;
+$logo-width: 200px;
+
+.Logo {
+  position: absolute;
+  width: $mobile-logo-width;
+  z-index: 10;
+  top: 35px;
+  left: 20px;
+
+  @include media($min-tablet) {
+    width: $logo-width;
+  }
+
+  @include media($min-desktop) {
+    top: $base-spacing;
+    left: $large-spacing;
+  }
+}
+
+.menu-burger {
+  position: fixed;
+  z-index: 30;
+  right: 5%;
+  top: 20px;
+  height: 54px;
+  width: 54px;
+  background-color: $deep-green;
+  border-radius: 50%;
+
+  /* image replacement */
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+
+  @include transition(
+    transform $animation-duration - 0.2s,
+    background-color $animation-duration - 0.2s
+  );
+
+  .nav-icon {
+    /* icon created in CSS */
+    z-index: 1;
+    position: absolute;
+    @include center; // mixin inside partials > _mixins.scss
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  circle {
+    /* circle border animation */
+    @include transition(stroke-dashoffset $animation-duration - 0.3s 0s);
+  }
+
+  .navigation-is-open & {
+    /* rotate trigger when navigation becomes visible */
+    @include transform(rotate(180deg));
+
+    circle {
+      stroke-dashoffset: 0;
+      @include transition(stroke-dashoffset $animation-duration - 0.3s 0.3s);
+    }
+  }
+
+  @include media($min-desktop) {
+    top: 40px;
+  }
+}
+
+button.nav-icon {
+  background-color: $deep-green;
+
+  :hover {
+    background-color: $deep-green;
+
+    .hamburger-inner {
+      background-color: $white;
+    }
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.navbar {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+  background-color: $charcoal;
+  @include transition(visibility 0s $animation-duration);
+
+  .navigation-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 40px 5%;
+  }
+
+  .navigation-is-open & {
+    visibility: visible;
+    @include transition(visibility 0s 0s);
+
+    .primary-nav {
+      -webkit-animation-name: fadeIn;
+      animation-name: fadeIn;
+      -webkit-animation-duration: $animation-duration;
+      animation-duration: $animation-duration;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+  }
+
+  .primary-nav {
+    margin-top: $base-spacing;
+    list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+    -webkit-animation-duration: $animation-duration;
+    animation-duration: $animation-duration;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+    li {
+      margin: $small-spacing 0;
+    }
+
+    a {
+      color: $white;
+      font-weight: $bold-font-weight;
+      font-family: $serif-font-family;
+      display: inline-block;
+      font-size: $med-font-size;
+
+      @include media($min-tablet) {
+        font-size: $large-font-size;
+      }
+
+      &.selected {
+        color: $white;
+      }
+
+      .no-touch &:hover {
+        color: $slight-green;
+        text-decoration: none;
+      }
+
+      &:hover svg {
+        fill: $slight-green;
+      }
+    }
+  }
+
+  @include media($min-desktop) {
+    .navigation-wrapper {
+      padding: 62px 20%;
+      @include clearfix;
+    }
+  }
+
+  .icon svg {
+    fill: $white;
+  }
+}
+
+body:not(.navigation-is-open) {
+  .navbar {
+    .navigation-wrapper {
+      overflow: hidden;
+    }
+  }
+}
+
+body.navigation-is-open {
+  .menu-burger {
+    background-color: $charcoal;
+  }
+}

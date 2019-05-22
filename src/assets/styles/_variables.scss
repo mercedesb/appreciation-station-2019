@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Gothic+A1:300,900|Merriweather:400,900|PT+Mono");
+
+// Typography
+//
+
+$serif-font-family: "Merriweather", serif;
+$sans-serif-font-family: "Gothic A1", sans-serif;
+$mono-font-family: "PT Mono", monospace;
+
+// Font weight
+//
+$light-font-weight: 300;
+$base-font-weight: 400;
+$bold-font-weight: 900;
+
+// Font Sizes
+//
+$small-font-size: 14px;
+$base-font-size: 18px;
+$giant-font-size: 65px;
+$large-font-size: 45px;
+$med-lg-font-size: 35px;
+$med-font-size: 25px;
+
+// Line height
+//
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+//
+$base-border-radius: 5px;
+$base-spacing: 60px;
+$base-mobile-spacing: 40px;
+$small-spacing: 20px;
+$large-spacing: 100px;
+$base-z-index: 0;
+
+// Colors
+
+$dark-green: #0c1915;
+$deep-green: #19372e;
+$green: #44957c;
+$accent-green: #22936f;
+$slight-green: #4ab593;
+$light-green: #a9dfce;
+$charcoal: #262829;
+$white: #ffffff;
+$light-yellow: #fffbf3;
+$dark-gray: #e5e5e5;
+$gray: #f2f2f2;
+$light-gray: #f7f7f7;
+
+// Font Colors
+//
+$base-font-color: $charcoal;
+$action-color: $slight-green;
+$link-color: $green;
+
+// Border
+//
+$base-border-color: $dark-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+//
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow,
+  0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+//
+$animation-duration: 0.5s;
+$base-duration: 150ms;
+$base-timing: ease;
+
+// Grid system
+//
+$max-feature: max-width;
+$min-feature: min-width;
+$default-feature: $max-feature;
+// phone and phone max width
+$phone-width: 320px;
+$phone-large-width: 480px;
+$min-phone: $min-feature $phone-width;
+$max-phone: $max-feature ($phone-width + 1);
+$min-phone-large: $min-feature $phone-large-width;
+$max-phone-large: $max-feature ($phone-large-width + 1);
+// tablet and phone max width
+$tablet-width: 768px;
+$tablet-large-width: 1024px;
+$min-tablet: $min-feature $tablet-width;
+$max-tablet: $max-feature ($tablet-width + 1);
+$min-tablet-large: $min-feature $tablet-large-width;
+$max-tablet-large: $max-feature ($tablet-large-width + 1);
+// desktop and phone max width
+$desktop-width: 1224px;
+$desktop-text-width: 1090px;
+$desktop-large-width: 1824px;
+$min-desktop: $min-feature $desktop-width;
+$max-desktop: $max-feature ($desktop-width + 1);
+$min-desktop-large: $min-feature $desktop-large-width;
+$max-desktop-large: $max-feature ($desktop-large-width + 1);
