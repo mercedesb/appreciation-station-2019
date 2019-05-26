@@ -12,7 +12,7 @@ $desktop-text-top-offset: 70px;
   align-items: center;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 120%;
 
   @include media($min-tablet) {
     // background-image: url("../../assets/images/Dev_TogetherCoverImage.jpg");
@@ -50,5 +50,27 @@ $desktop-text-top-offset: 70px;
       font-size: $large-font-size;
       top: $desktop-text-top-offset;
     }
+  }
+
+  &--animating {
+    animation: confetti 1s linear infinite;
+  }
+}
+
+@keyframes confetti {
+  0% {
+    background-position: top;
+  }
+  1% {
+    background-position: bottom;
+  }
+  50% {
+    background-position: bottom;
+  }
+  51% {
+    background-position: top;
+  }
+  100% {
+    background-position: top;
   }
 }
