@@ -5,22 +5,25 @@ export default function Footer() {
   const brandSiteUrl = "https://devtogether.co";
 
   return (
-    <footer class="GlobalFooter">
-      <section class="Section">
+    <footer className="GlobalFooter">
+      <section className="Section">
         <img
-          class="BackgroundHeading"
+          className="BackgroundHeading"
           src={GetInvolved}
           alt="Get Involved text"
         />
-        <h2 class="h1 Section-heading">Join Us!</h2>
-        <div class="Grid Grid--noBorder">
-          <div class="GridItem GridItem--full">
-            <p class="Subtitle">
+        <h2 className="h1 Section-heading">Join Us!</h2>
+        <div className="Grid Grid--noBorder">
+          <div className="GridItem GridItem--full">
+            <p className="Subtitle">
               Become a part of a growing community and continue to develop your
               technical and non-technical skills.
             </p>
             <div>
-              <a class="Button Button--light" href={`${brandSiteUrl}/chapters`}>
+              <a
+                className="Button Button--light"
+                href={`${brandSiteUrl}/chapters`}
+              >
                 Find a Chapter
               </a>
             </div>
@@ -44,7 +47,7 @@ export default function Footer() {
           <a href={`${brandSiteUrl}/code-of-conduct/`}>Code of Conduct</a>
         </li>
       </ul>
-      <div class="Copyright">&copy; 2019 Dev Together</div>
+      <div className="Copyright">&copy; 2019 Dev Together</div>
     </footer>
   );
 }

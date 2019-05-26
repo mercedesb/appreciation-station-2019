@@ -10,7 +10,7 @@ export default function ThankYouLetter() {
         src={ShortNote}
         alt="Short Note text"
       />
-      <h2 class="h1 Section-heading">Thank you</h2>
+      <h2 className="h1 Section-heading">Thank you</h2>
       <div className="Grid Grid--small">
         <div className="GridItem GridItem--full">
           <p className="Subtitle">

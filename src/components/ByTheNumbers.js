@@ -38,8 +38,8 @@ export default function ByTheNumbers() {
 
   const renderStatistic = (number, text, color) => {
     return (
-      <div class="GridItem GridItem--third Statistic">
-        <div class="Statistic-background">
+      <div className="GridItem GridItem--third Statistic">
+        <div className="Statistic-background">
           <svg x="0px" y="0px" viewBox="0 0 54 54">
             <circle
               fill={color}
@@ -53,8 +53,8 @@ export default function ByTheNumbers() {
             />
           </svg>
         </div>
-        <div class="Statistic-number">{number}</div>
-        <p class="Statistic-text">{text}</p>
+        <div className="Statistic-number">{number}</div>
+        <p className="Statistic-text">{text}</p>
       </div>
     );
   };
