@@ -1,18 +1,8 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import ThankYouCover from "./components/ThankYouCover";
 
 function App() {
-  return (
-    <div className="App">
-      <main>
-        <section class="Cover">
-          <header>
-            <Navigation />
-          </header>
-        </section>
-      </main>
-    </div>
-  );
+  return <ThankYouCover />;
 }
 
 export default App;

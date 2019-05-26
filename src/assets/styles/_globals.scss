@@ -35,7 +35,7 @@ body {
   }
 }
 
-body > * {
+#root > * {
   padding: 0 $small-spacing;
 
   @include media($min-desktop) {

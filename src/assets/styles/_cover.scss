@@ -1,8 +1,10 @@
 $cover-spacing: 40px;
+$tablet-text-top-offset: 40px;
+$desktop-text-top-offset: 70px;
 
 .Cover {
   color: $white;
-  // background-image: url("../../assets/images/Dev_TogetherCoverImageMobile.jpg");
+  background-image: url("../images/Confetti.svg");
   margin-bottom: $large-spacing;
   display: flex;
   justify-content: center;
@@ -22,55 +24,29 @@ $cover-spacing: 40px;
   &-text {
     text-align: center;
     margin-top: $base-spacing;
+    position: relative;
 
     @include media($min-desktop) {
       max-width: $desktop-text-width;
     }
   }
 
-  &-title {
-    font-size: $base-font-size;
-    line-height: 1.5;
+  &-subtitle {
+    font-weight: $bold-font-weight;
+    font-size: $med-font-size;
+    font-family: $serif-font-family;
+    position: absolute;
+    left: 0;
+    top: 0px;
 
     @include media($min-tablet) {
       font-size: $med-lg-font-size;
+      top: $tablet-text-top-offset;
     }
 
     @include media($min-desktop) {
       font-size: $large-font-size;
-    }
-
-    margin-bottom: $cover-spacing;
-  }
-
-  &-subtitle {
-    display: none;
-
-    @include media($min-tablet) {
-      display: inline-block;
-    }
-
-    font-size: $med-font-size;
-    font-weight: $light-font-weight;
-    margin-bottom: $cover-spacing;
-  }
-
-  &-scroll {
-    display: none;
-
-    @include media($min-desktop) {
-      display: inline-block;
-    }
-
-    font-family: $mono-font-family;
-    margin-top: $cover-spacing * 2;
-  }
-
-  .Button {
-    margin-bottom: $base-spacing - $small-spacing;
-
-    @include media($min-desktop) {
-      margin-bottom: $small-spacing;
+      top: $desktop-text-top-offset;
     }
   }
 }
