@@ -14,3 +14,44 @@
 @import "cover";
 @import "content";
 @import "statistics";
+
+.Confetti {
+  display: none;
+
+  @include media($min-desktop) {
+    display: inline-block;
+    position: absolute;
+
+    &--small {
+      width: 175px;
+    }
+
+    &--med {
+      width: 200px;
+    }
+
+    &--large {
+      width: 462px;
+    }
+
+    &--one {
+      top: 120px;
+      right: -130px;
+    }
+
+    &--two {
+      top: 360px;
+      left: 200px;
+    }
+
+    &--three {
+      top: 700px;
+      left: -100px;
+    }
+
+    &--four {
+      top: 650px;
+      right: 230px;
+    }
+  }
+}

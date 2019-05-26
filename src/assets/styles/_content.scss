@@ -34,6 +34,14 @@ $column-gap: 40px;
     padding-bottom: 0;
   }
 
+  &--small {
+    @include media($min-desktop) {
+      grid-template-columns: repeat(5, 1fr);
+      max-width: $desktop-text-width;
+      padding: 0 0 $large-spacing;
+    }
+  }
+
   &--topSpacing {
     padding-top: $base-spacing;
     padding-bottom: $base-spacing;
@@ -114,6 +122,13 @@ $column-gap: 40px;
     @include media($min-desktop) {
       grid-column-end: span ($desktop-row-items / 3 * 2 + 1);
     }
+  }
+}
+
+.Grid--small .GridItem--full {
+  @include media($min-desktop) {
+    grid-column-start: 2;
+    grid-column-end: span 3;
   }
 }
 
