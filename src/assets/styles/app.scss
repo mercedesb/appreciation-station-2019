@@ -55,3 +55,26 @@
     }
   }
 }
+
+.Sponsor {
+  border: 1px solid $gray;
+  padding: $small-spacing;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--premium {
+    border: 2px solid $dark-gray;
+
+    @include media($min-desktop) {
+      border: 1px solid $gray;
+      grid-column-end: span 2;
+    }
+  }
+
+  @include media($min-desktop) {
+    &:nth-child(4n) {
+      grid-column-start: 2;
+    }
+  }
+}

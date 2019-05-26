@@ -2,18 +2,22 @@ import React from "react";
 import ThankYouCover from "./components/ThankYouCover";
 import ByTheNumbers from "./components/ByTheNumbers";
 import ThankYouLetter from "./components/ThankYouLetter";
+import SponsorShoutout from "./components/SponsorShoutout";
 import Footer from "./components/Footer";
 
 function App() {
   return (
     <React.Fragment>
       <ThankYouCover />
-      <div className="Section">
+      <section className="Section">
         <ByTheNumbers />
-      </div>
-      <div className="Section">
+      </section>
+      <section className="Section">
         <ThankYouLetter />
-      </div>
+      </section>
+      <section className="Section">
+        <SponsorShoutout />
+      </section>
       <Footer />
     </React.Fragment>
   );
