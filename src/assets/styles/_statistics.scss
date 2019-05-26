@@ -1,0 +1,75 @@
+$tablet-margin-top: 160px;
+
+.StatisticsContainer {
+  grid-auto-rows: min-content;
+  margin-top: -$base-spacing;
+
+  @include media($min-tablet) {
+    margin-top: -$tablet-margin-top;
+  }
+
+  @include media($min-desktop) {
+    margin-top: -$base-spacing;
+  }
+}
+
+.Statistic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  margin-top: $large-spacing;
+
+  &:last-child {
+    margin-bottom: $base-spacing;
+  }
+
+  @include media($min-desktop) {
+    margin-top: 0;
+
+    &:nth-child(4) {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+  }
+
+  &-background {
+    vertical-align: middle;
+    position: absolute;
+    svg {
+      width: 100%;
+    }
+  }
+
+  &-number {
+    font-size: 100px;
+    font-weight: 900;
+    color: $green;
+    z-index: 1;
+
+    @include media($min-desktop) {
+      font-size: 90px;
+      margin-top: 20px;
+    }
+  }
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-text {
+    font-family: $sans-serif-font-family;
+    font-weight: $light-font-weight;
+    z-index: 1;
+
+    @include media($min-tablet) {
+      width: 50%;
+    }
+
+    @include media($min-desktop) {
+      width: 320px;
+    }
+  }
+}

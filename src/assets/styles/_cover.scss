@@ -4,8 +4,9 @@ $desktop-text-top-offset: 70px;
 
 .Cover {
   color: $white;
+  background-color: $dark-green;
   background-image: url("../images/Confetti.svg");
-  margin-bottom: $large-spacing;
+  padding-bottom: $large-spacing !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,6 +20,7 @@ $desktop-text-top-offset: 70px;
     height: 100vh;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
+    margin-bottom: 0;
   }
 
   &-text {
