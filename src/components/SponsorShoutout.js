@@ -5,12 +5,12 @@ import RedShelfLogo from "../assets/images/sponsors/RedShelfLogo.svg";
 import TandemLogo from "../assets/images/sponsors/TandemLogo.svg";
 import SitterCityLogo from "../assets/images/sponsors/SitterCityLogo.svg";
 import UCXMarketLogo from "../assets/images/sponsors/UCXMarketLogo.svg";
-import BreakFreeSolutionsLogo from "../assets/images/sponsors/BreakFreeSolutionsLogo.png";
-import CodingDojoLogo from "../assets/images/sponsors/CodingDojoLogo.png";
-import KennaSecurityLogo from "../assets/images/sponsors/KennaSecurityLogo.png";
+import BreakFreeSolutionsLogo from "../assets/images/sponsors/BreakFreeSolutionsLogo.svg";
+import CodingDojoLogo from "../assets/images/sponsors/CodingDojoLogo.svg";
+import KennaSecurityLogo from "../assets/images/sponsors/KennaSecurityLogo.svg";
 import ActiveCampaignLogo from "../assets/images/sponsors/ActiveCampaignLogo.svg";
 import HomeChefLogo from "../assets/images/sponsors/HomeChefLogo.svg";
-import CameoLogo from "../assets/images/sponsors/CameoLogo-icon.svg";
+import CameoLogo from "../assets/images/sponsors/CameoLogo.svg";
 
 export default function SponsorShoutout() {
   const sponsors = [

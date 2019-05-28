@@ -4,8 +4,8 @@ export default function ByTheNumbers() {
   const YELLOW = "#FFF7E4";
   const BLUE = "#EBF3FB";
   const RED = "#F7EAEA";
-  const ORANGE = "#EBF3FB";
-  const GREEN = "#a9dfce";
+  const ORANGE = "#F7F3EF";
+  const GREEN = "#E3F3F3";
 
   const statistics = [
     {
