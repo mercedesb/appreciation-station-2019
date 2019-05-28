@@ -9,7 +9,7 @@ $tablet-margin-top: 160px;
   }
 
   @include media($min-desktop) {
-    margin-top: -$base-spacing;
+    margin-top: -$large-spacing;
   }
 }
 

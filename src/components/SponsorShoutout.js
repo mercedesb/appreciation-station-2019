@@ -86,7 +86,7 @@ export default function SponsorShoutout() {
     <React.Fragment>
       <img className="BackgroundHeading" src={Sponsors} alt="Sponsors text" />
       <h2 className="h1 Section-heading">Special Shoutout</h2>
-      <div className="Grid Grid--topSpacing">
+      <div className="Grid Grid--topSpacing Grid--twelve">
         {sponsors.map(sponsor =>
           renderSponsorLogo(sponsor.name, sponsor.logo, sponsor.isPremium)
         )}

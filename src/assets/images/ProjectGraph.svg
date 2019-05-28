@@ -7,8 +7,8 @@
         <rect id="path-1" x="0" y="0" width="808" height="784"></rect>
     </defs>
     <g id="1-Year-Anniversary" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Homepage-" transform="translate(-789.000000, -3186.000000)">
-            <g id="Graph-Copy" transform="translate(789.000000, 3186.000000)">
+        <g id="Homepage-" transform="translate(-789.000000, -3656.000000)">
+            <g id="Graph-Copy" transform="translate(789.000000, 3656.000000)">
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
@@ -88,10 +88,10 @@
                 <path d="M240,468 L258,468 C259.104569,468 260,468.895431 260,470 L260,496 C260,497.104569 259.104569,498 258,498 L240,498 L240,468 Z" id="Rectangle-Copy-22" fill="#4AB593" mask="url(#mask-2)"></path>
                 <path d="M240,638 L248,638 C249.104569,638 250,638.895431 250,640 L250,666 C250,667.104569 249.104569,668 248,668 L240,668 L240,638 Z" id="Rectangle-Copy-23" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
                 <path d="M240,672 L248,672 C249.104569,672 250,672.895431 250,674 L250,700 C250,701.104569 249.104569,702 248,702 L240,702 L240,672 Z" id="Rectangle-Copy-24" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M238,150 L238,715.675378" id="Line" stroke="#F7F7F7" stroke-width="4" stroke-linecap="square" mask="url(#mask-2)"></path>
-                <path d="M383,150 L383,715.675378" id="Line-Copy" stroke="#F7F7F7" stroke-width="0.5" stroke-linecap="square" mask="url(#mask-2)"></path>
-                <path d="M528,150 L528,715.675378" id="Line-Copy-2" stroke="#F7F7F7" stroke-width="0.5" stroke-linecap="square" mask="url(#mask-2)"></path>
-                <path d="M673,150 L673,715.675378" id="Line-Copy-3" stroke="#F7F7F7" stroke-width="0.5" stroke-linecap="square" mask="url(#mask-2)"></path>
+                <polygon id="Line" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="236 148 236 717.675378 240 717.675378 240 148"></polygon>
+                <polygon id="Line-Copy" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="382.75 149.75 382.75 715.925378 383.25 715.925378 383.25 149.75"></polygon>
+                <polygon id="Line-Copy-2" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="527.75 149.75 527.75 715.925378 528.25 715.925378 528.25 149.75"></polygon>
+                <polygon id="Line-Copy-3" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="672.75 149.75 672.75 715.925378 673.25 715.925378 673.25 149.75"></polygon>
                 <path d="M240,162 L665,162 C666.104569,162 667,162.895431 667,164 L667,190 C667,191.104569 666.104569,192 665,192 L240,192 L240,162 Z" id="Rectangle" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
                 <text id="Projects-by-Language" mask="url(#mask-2)" font-family="GothicA1-Bold, Gothic A1" font-size="40" font-weight="bold" fill="#FFFFFF">
                     <tspan x="198.304688" y="86">Projects by Language</tspan>

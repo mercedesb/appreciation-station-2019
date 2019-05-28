@@ -9,8 +9,8 @@ export default function ByTheNumbers() {
 
   const statistics = [
     {
-      number: 19,
-      text: "Events held across our Chicago and Madison chapters.",
+      number: 12,
+      text: "Events held by our Chicago chapter.",
       color: YELLOW
     },
     {

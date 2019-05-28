@@ -42,6 +42,12 @@ $column-gap: 40px;
     }
   }
 
+  &--twelve {
+    @include media($min-desktop) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
   &--topSpacing {
     padding-top: $base-spacing;
     padding-bottom: $base-spacing;

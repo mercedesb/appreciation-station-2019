@@ -1,29 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Navigation from "./Navigation";
 import ThankYou from "../assets/images/ThankYou.svg";
 
 export default function ThankYouCover() {
-  const [shouldAnimate, setShouldAnimate] = useState(false);
-
-  useEffect(() => {
-    function animate() {
-      if (window.scrollY === 0) {
-        setShouldAnimate(false);
-      } else {
-        setShouldAnimate(true);
-      }
-    }
-
-    window.addEventListener("scroll", animate);
-
-    // return cleanup function
-    return () => {
-      window.removeEventListener("scroll", animate);
-    };
-  }, []);
-
   return (
-    <section className={`Cover ${shouldAnimate ? "Cover--animating" : ""}`}>
+    <section className="Cover Cover--animating">
       <header>
         <Navigation />
       </header>
