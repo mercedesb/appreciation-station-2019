@@ -10,9 +10,9 @@ $desktop-text-top-offset: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-position: center;
-  background-size: 120%;
+  background-size: 80%;
 
   @include media($min-tablet) {
     // background-image: url("../../assets/images/Dev_TogetherCoverImage.jpg");
@@ -53,7 +53,7 @@ $desktop-text-top-offset: 70px;
   }
 
   &--animating {
-    animation: confetti 1s linear infinite;
+    animation: confetti 1.5s linear infinite;
   }
 }
 
@@ -62,10 +62,10 @@ $desktop-text-top-offset: 70px;
     background-position: top;
   }
   1% {
-    background-position: bottom;
+    background-position: center;
   }
   50% {
-    background-position: bottom;
+    background-position: center;
   }
   51% {
     background-position: top;
