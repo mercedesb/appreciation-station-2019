@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="808px" height="784px" viewBox="0 0 808 784" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Graph Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="808" height="784"></rect>
+    </defs>
+    <g id="1-Year-Anniversary" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Homepage-" transform="translate(-789.000000, -3186.000000)">
+            <g id="Graph-Copy" transform="translate(789.000000, 3186.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Mask" fill="#0C1915" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <text id="React" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="181.736" y="182">React</tspan>
+                </text>
+                <text id="React-Native-Copy" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="135.656" y="386">React Native</tspan>
+                </text>
+                <text id="Javascript-(vanilla-Copy" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="79.656" y="216">Javascript (vanilla js)</tspan>
+                </text>
+                <text id="JS" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="202.776" y="522">JS</tspan>
+                </text>
+                <text id="Rails" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="187.176" y="590">Rails</tspan>
+                </text>
+                <text id="Python" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="170.936" y="284">Python</tspan>
+                </text>
+                <text id="SQL" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="192.056" y="454">SQL</tspan>
+                </text>
+                <text id="Java" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="188.04" y="318">Java</tspan>
+                </text>
+                <text id="Node" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="183.16" y="352">Node</tspan>
+                </text>
+                <text id="Ruby-on-Rails" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="129.288" y="250">Ruby on Rails</tspan>
+                </text>
+                <text id="PHP" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="190.456" y="556">PHP</tspan>
+                </text>
+                <text id="jQuery-Copy" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="174.36" y="420">jQuery</tspan>
+                </text>
+                <text id="Django" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="171.88" y="624">Django</tspan>
+                </text>
+                <text id="Angular" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="167.08" y="488">Angular</tspan>
+                </text>
+                <text id="Vue" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="194.6" y="658">Vue</tspan>
+                </text>
+                <text id="CSS" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="193.384" y="692">CSS</tspan>
+                </text>
+                <text id="0" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="234.048" y="732">0</tspan>
+                </text>
+                <text id="10" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="375.096" y="732">10</tspan>
+                </text>
+                <text id="20" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="520.096" y="732">20</tspan>
+                </text>
+                <text id="30" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
+                    <tspan x="665.096" y="732">30</tspan>
+                </text>
+                <path d="M240,366 L268,366 C269.104569,366 270,366.895431 270,368 L270,394 C270,395.104569 269.104569,396 268,396 L240,396 L240,366 Z" id="Rectangle-Copy-2" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,196 L376,196 C377.104569,196 378,196.895431 378,198 L378,224 C378,225.104569 377.104569,226 376,226 L240,226 L240,196 Z" id="Rectangle-Copy-25" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,502 L258,502 C259.104569,502 260,502.895431 260,504 L260,530 C260,531.104569 259.104569,532 258,532 L240,532 L240,502 Z" id="Rectangle-Copy-12" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,570 L248,570 C249.104569,570 250,570.895431 250,572 L250,598 C250,599.104569 249.104569,600 248,600 L240,600 L240,570 Z" id="Rectangle-Copy-13" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,264 L305,264 C306.104569,264 307,264.895431 307,266 L307,292 C307,293.104569 306.104569,294 305,294 L240,294 L240,264 Z" id="Rectangle-Copy-14" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,434 L258,434 C259.104569,434 260,434.895431 260,436 L260,462 C260,463.104569 259.104569,464 258,464 L240,464 L240,434 Z" id="Rectangle-Copy-15" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,298 L288,298 C289.104569,298 290,298.895431 290,300 L290,326 C290,327.104569 289.104569,328 288,328 L240,328 L240,298 Z" id="Rectangle-Copy-16" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,332 L288,332 C289.104569,332 290,332.895431 290,334 L290,360 C290,361.104569 289.104569,362 288,362 L240,362 L240,332 Z" id="Rectangle-Copy-17" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,230 L318,230 C319.104569,230 320,230.895431 320,232 L320,258 C320,259.104569 319.104569,260 318,260 L240,260 L240,230 Z" id="Rectangle-Copy-18" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,536 L248,536 C249.104569,536 250,536.895431 250,538 L250,564 C250,565.104569 249.104569,566 248,566 L240,566 L240,536 Z" id="Rectangle-Copy-19" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,400 L268,400 C269.104569,400 270,400.895431 270,402 L270,428 C270,429.104569 269.104569,430 268,430 L240,430 L240,400 Z" id="Rectangle-Copy-26" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,604 L248,604 C249.104569,604 250,604.895431 250,606 L250,632 C250,633.104569 249.104569,634 248,634 L240,634 L240,604 Z" id="Rectangle-Copy-21" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,468 L258,468 C259.104569,468 260,468.895431 260,470 L260,496 C260,497.104569 259.104569,498 258,498 L240,498 L240,468 Z" id="Rectangle-Copy-22" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,638 L248,638 C249.104569,638 250,638.895431 250,640 L250,666 C250,667.104569 249.104569,668 248,668 L240,668 L240,638 Z" id="Rectangle-Copy-23" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,672 L248,672 C249.104569,672 250,672.895431 250,674 L250,700 C250,701.104569 249.104569,702 248,702 L240,702 L240,672 Z" id="Rectangle-Copy-24" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M238,150 L238,715.675378" id="Line" stroke="#F7F7F7" stroke-width="4" stroke-linecap="square" mask="url(#mask-2)"></path>
+                <path d="M383,150 L383,715.675378" id="Line-Copy" stroke="#F7F7F7" stroke-width="0.5" stroke-linecap="square" mask="url(#mask-2)"></path>
+                <path d="M528,150 L528,715.675378" id="Line-Copy-2" stroke="#F7F7F7" stroke-width="0.5" stroke-linecap="square" mask="url(#mask-2)"></path>
+                <path d="M673,150 L673,715.675378" id="Line-Copy-3" stroke="#F7F7F7" stroke-width="0.5" stroke-linecap="square" mask="url(#mask-2)"></path>
+                <path d="M240,162 L665,162 C666.104569,162 667,162.895431 667,164 L667,190 C667,191.104569 666.104569,192 665,192 L240,192 L240,162 Z" id="Rectangle" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <text id="Projects-by-Language" mask="url(#mask-2)" font-family="GothicA1-Bold, Gothic A1" font-size="40" font-weight="bold" fill="#FFFFFF">
+                    <tspan x="198.304688" y="86">Projects by Language</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

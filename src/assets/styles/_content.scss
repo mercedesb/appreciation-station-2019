@@ -120,7 +120,7 @@ $column-gap: 40px;
 
   &--twoThirds {
     @include media($min-desktop) {
-      grid-column-end: span ($desktop-row-items / 3 * 2 + 1);
+      grid-column-end: span ($desktop-row-items / 3 * 2);
     }
   }
 }
