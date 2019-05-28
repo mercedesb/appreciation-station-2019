@@ -118,9 +118,11 @@ export const AppreciationStationConfig = (function() {
     getBackgroundImages: function() {
       return getConfig().then(config => {
         return config.backgroundImages.map(img => {
+          const { image, ...otherFields } = img.fields;
           return {
             id: img.sys.id,
-            ...img.fields
+            ...image.fields,
+            ...otherFields
           };
         });
       });
