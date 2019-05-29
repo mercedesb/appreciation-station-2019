@@ -1,110 +1,126 @@
-import React, { useEffect } from "react";
+import React, { Component } from "react";
 import { AppreciationStationConfig } from "../lib/data";
 
-export default function ThankYouCard(props) {
-  const canvasRef = React.useRef(null);
+export default class ThankYouCard extends Component {
+  constructor(props) {
+    super(props);
+    this.canvasRef = React.createRef();
+    this.state = {
+      img: null
+    };
+  }
 
-  useEffect(() => {
-    function createImageForCanvas() {
-      var img = new Image(); // Create new img element
-      img.crossOrigin = "anonymous";
-      img.src = props.backgroundImage.file.url;
-      return img;
-    }
+  componentDidMount() {
+    let img = this.createImageForCanvas();
+    img.addEventListener("load", this.drawCanvas, false);
+    window.addEventListener("resize", this.drawCanvas);
+    this.setState({ img: img });
+  }
 
-    function setCanvasSize(canvas, width, height) {
-      canvas.width = width;
-      canvas.height = height;
-    }
+  componentDidUpdate() {
+    this.drawCanvas();
+  }
 
-    function drawBackgroundImage(context, img, width, height) {
-      context.drawImage(img, 0, 0, width, height);
-    }
+  componentWillUnmount() {
+    this.state.img.removeEventListener("load", this.drawCanvas);
+    window.removeEventListener("resize", this.drawCanvas);
+  }
 
-    function drawText(context, width, height) {
-      const canvasMessage = props.message.text.replace(
-        "{NAME}",
-        props.member.name
-      );
+  createImageForCanvas = () => {
+    var img = new Image(); // Create new img element
+    img.crossOrigin = "anonymous";
+    img.src = this.props.backgroundImage.file.url;
+    return img;
+  };
 
-      const breakPoint = 720;
-      const smallFontSize = 24;
-      const largeFontSize = 48;
-      const fontSize = width < breakPoint ? smallFontSize : largeFontSize;
-      const lineSpacing = 10;
-      const lineHeight = fontSize + lineSpacing;
+  setCanvasSize = (canvas, width, height) => {
+    canvas.width = width;
+    canvas.height = height;
+  };
 
-      const baseSpacing = width < breakPoint ? 20 : 30;
-      const maxWidth = width * 0.75;
+  drawBackgroundImage = (context, img, width, height) => {
+    context.drawImage(img, 0, 0, width, height);
+  };
 
-      context.font = `600 ${fontSize}px Merriweather`;
-      context.fillStyle = "#ffffff";
+  drawText = (context, width, height) => {
+    const canvasMessage = this.props.message.text.replace(
+      "{NAME}",
+      this.props.member.name
+    );
 
-      let leftPosition, topPosition;
+    const breakPoint = 720;
+    const smallFontSize = 24;
+    const largeFontSize = 48;
+    const fontSize = width < breakPoint ? smallFontSize : largeFontSize;
+    const lineSpacing = 10;
+    const lineHeight = fontSize + lineSpacing;
 
-      const lines = getLines(context, canvasMessage, maxWidth);
-      lines.forEach((line, index) => {
-        if (props.backgroundImage.textPosition === "topLeft") {
-          const multiplier = index + 1;
-          const space = multiplier * lineHeight + baseSpacing;
+    const baseSpacing = width < breakPoint ? 20 : 30;
+    const maxWidth = width * 0.75;
 
-          leftPosition = baseSpacing;
-          topPosition = space;
-        } else if (props.backgroundImage.textPosition === "bottomLeft") {
-          const multiplier = lines.length - 1 - index;
-          const space = multiplier * lineHeight + baseSpacing;
+    context.font = `600 ${fontSize}px Merriweather`;
+    context.fillStyle = "#ffffff";
 
-          leftPosition = baseSpacing;
-          topPosition = height - space;
-        }
+    let leftPosition, topPosition;
 
-        context.fillText(line, leftPosition, topPosition, maxWidth);
-      });
-    }
+    const lines = this.getLines(context, canvasMessage, maxWidth);
+    lines.forEach((line, index) => {
+      if (this.props.backgroundImage.textPosition === "topLeft") {
+        const multiplier = index + 1;
+        const space = multiplier * lineHeight + baseSpacing;
 
-    function getLines(context, text, maxWidth) {
-      var words = text.split(" ");
-      var lines = [];
-      var currentLine = words[0];
+        leftPosition = baseSpacing;
+        topPosition = space;
+      } else if (this.props.backgroundImage.textPosition === "bottomLeft") {
+        const multiplier = lines.length - 1 - index;
+        const space = multiplier * lineHeight + baseSpacing;
 
-      for (var i = 1; i < words.length; i++) {
-        var word = words[i];
-        var width = context.measureText(currentLine + " " + word).width;
-        if (width < maxWidth) {
-          currentLine += " " + word;
-        } else {
-          lines.push(currentLine);
-          currentLine = word;
-        }
+        leftPosition = baseSpacing;
+        topPosition = height - space;
       }
-      lines.push(currentLine);
-      return lines;
+
+      context.fillText(line, leftPosition, topPosition, maxWidth);
+    });
+  };
+
+  getLines = (context, text, maxWidth) => {
+    var words = text.split(" ");
+    var lines = [];
+    var currentLine = words[0];
+
+    for (var i = 1; i < words.length; i++) {
+      var word = words[i];
+      var width = context.measureText(currentLine + " " + word).width;
+      if (width < maxWidth) {
+        currentLine += " " + word;
+      } else {
+        lines.push(currentLine);
+        currentLine = word;
+      }
     }
+    lines.push(currentLine);
+    return lines;
+  };
 
-    function drawCanvas(img) {
-      const canvas = canvasRef.current;
-      const container = canvas.parentNode;
-      const width = container.offsetWidth;
-      const height = width * (9 / 16); // maintain 16:9 aspect ratio
+  drawCanvas = () => {
+    const canvas = this.canvasRef.current;
+    const container = canvas.parentNode;
+    const width = container.offsetWidth;
+    const height = width * (9 / 16); // maintain 16:9 aspect ratio
 
-      setCanvasSize(canvas, width, height);
+    this.setCanvasSize(canvas, width, height);
 
-      const context = canvas.getContext("2d");
+    const context = canvas.getContext("2d");
 
-      drawBackgroundImage(context, img, width, height);
-      drawText(context, width, height);
-    }
+    this.drawBackgroundImage(context, this.state.img, width, height);
+    this.drawText(context, width, height);
+  };
 
-    let img = createImageForCanvas();
-    img.addEventListener("load", () => drawCanvas(img), false);
-    window.addEventListener("resize", () => drawCanvas(img));
-  });
-
-  const share = () => {
-    const canvas = canvasRef.current;
+  share = () => {
+    const canvas = this.canvasRef.current;
     const imgData = canvas.toDataURL("png");
     const fileName = `Thank you ${
-      props.member.name
+      this.props.member.name
     }! - ${new Date().toISOString()}`;
 
     AppreciationStationConfig.uploadImage(imgData, fileName).then(asset => {
@@ -117,14 +133,16 @@ export default function ThankYouCard(props) {
     });
   };
 
-  return (
-    <React.Fragment>
-      <div className="ThankYouCardContainer">
-        <canvas ref={canvasRef} />
-      </div>
-      <div>
-        <span onClick={share}>Share</span>
-      </div>
-    </React.Fragment>
-  );
+  render() {
+    return (
+      <React.Fragment>
+        <div className="ThankYouCardContainer">
+          <canvas ref={this.canvasRef} />
+        </div>
+        <div>
+          <span onClick={this.share}>Share</span>
+        </div>
+      </React.Fragment>
+    );
+  }
 }
