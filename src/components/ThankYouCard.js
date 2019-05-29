@@ -5,16 +5,14 @@ export default function ThankYouCard(props) {
   const canvasRef = React.useRef(null);
 
   useEffect(() => {
-    const imgWidth = 1200;
-    const imgHeight = 675;
-
-    function setImageProps(img, width, height) {
-      const { url } = props.backgroundImage.file;
+    function createImageForCanvas() {
+      var img = new Image(); // Create new img element
       img.crossOrigin = "anonymous";
-      img.src = `${url}?w=${width}&h=${height}&fit=fill`;
+      img.src = props.backgroundImage.file.url;
+      return img;
     }
 
-    function setCavasSize(canvas, width, height) {
+    function setCanvasSize(canvas, width, height) {
       canvas.width = width;
       canvas.height = height;
     }
@@ -23,18 +21,21 @@ export default function ThankYouCard(props) {
       context.drawImage(img, 0, 0, width, height);
     }
 
-    function drawText(context) {
+    function drawText(context, width, height) {
       const canvasMessage = props.message.text.replace(
         "{NAME}",
         props.member.name
       );
 
-      const fontSize = 48;
+      const breakPoint = 720;
+      const smallFontSize = 24;
+      const largeFontSize = 48;
+      const fontSize = width < breakPoint ? smallFontSize : largeFontSize;
       const lineSpacing = 10;
       const lineHeight = fontSize + lineSpacing;
 
-      const baseSpacing = 20;
-      const maxWidth = 700;
+      const baseSpacing = width < breakPoint ? 20 : 30;
+      const maxWidth = width * 0.75;
 
       context.font = `600 ${fontSize}px Merriweather`;
       context.fillStyle = "#ffffff";
@@ -54,7 +55,7 @@ export default function ThankYouCard(props) {
           const space = multiplier * lineHeight + baseSpacing;
 
           leftPosition = baseSpacing;
-          topPosition = imgHeight - space;
+          topPosition = height - space;
         }
 
         context.fillText(line, leftPosition, topPosition, maxWidth);
@@ -80,21 +81,23 @@ export default function ThankYouCard(props) {
       return lines;
     }
 
-    var img = new Image(); // Create new img element
-    img.addEventListener(
-      "load",
-      function() {
-        const canvas = canvasRef.current;
-        setCavasSize(canvas, imgWidth, imgHeight);
+    function drawCanvas(img) {
+      const canvas = canvasRef.current;
+      const container = canvas.parentNode;
+      const width = container.offsetWidth;
+      const height = width * (9 / 16); // maintain 16:9 aspect ratio
 
-        const context = canvas.getContext("2d");
+      setCanvasSize(canvas, width, height);
 
-        drawBackgroundImage(context, img, imgWidth, imgHeight);
-        drawText(context);
-      },
-      false
-    );
-    setImageProps(img, imgWidth, imgHeight);
+      const context = canvas.getContext("2d");
+
+      drawBackgroundImage(context, img, width, height);
+      drawText(context, width, height);
+    }
+
+    let img = createImageForCanvas();
+    img.addEventListener("load", () => drawCanvas(img), false);
+    window.addEventListener("resize", () => drawCanvas(img));
   });
 
   const share = () => {
@@ -116,7 +119,9 @@ export default function ThankYouCard(props) {
 
   return (
     <React.Fragment>
-      <canvas ref={canvasRef} />
+      <div className="ThankYouCardContainer">
+        <canvas ref={canvasRef} />
+      </div>
       <div>
         <span onClick={share}>Share</span>
       </div>
