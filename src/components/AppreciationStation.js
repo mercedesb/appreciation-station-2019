@@ -7,6 +7,7 @@ import PreviousNextArrow from "../assets/images/PreviousNextArrow.svg";
 export default function AppreciationStation() {
   const [thankYous, setThankYous] = useState([]);
   const [searchName, setSearchName] = useState("");
+  const [nameNotFound, setNameNotFound] = useState(false);
   const [
     currentVisibleThankYouIndex,
     setCurrentVisibleThankYouIndex
@@ -68,9 +69,13 @@ export default function AppreciationStation() {
     e.preventDefault();
 
     const indexToBeVisible = thankYous.findIndex(ty =>
-      ty.member.name.includes(searchName)
+      ty.member.name.toLowerCase().includes(searchName.toLowerCase())
     );
-    setCurrentVisibleThankYouIndex(indexToBeVisible);
+    if (indexToBeVisible >= 0) {
+      setCurrentVisibleThankYouIndex(indexToBeVisible);
+    } else {
+      setNameNotFound(true);
+    }
   }
 
   function renderPrevArrow() {
@@ -106,16 +111,18 @@ export default function AppreciationStation() {
     );
   }
 
+  const shouldShowThankYouCard = thankYous && thankYous.length > 0;
+
   return (
     <section className="Section">
       <img className="BackgroundHeading" src={WeDidIt} alt="We Did It text" />
       <h2 className="h1 Section-heading">Appreciation Station</h2>
-      <div className="Grid Grid--smallerSpacing">
+      <div className="Grid Grid--noBottomSpacing">
         <div className="GridItem GridItem--full">
           <p className="Subtitle">
             Did you have a great pairing experience and want to let your pair
             know you appreciate them? Did you have a great takeaway from one of
-            lightning talks? Search for their name and send them a thank you
+            our lightning talks? Search for their name and send them a thank you
             note. We've had 42 different mentors, 66 different mentees, 16
             different speakers, and 11 different sponsors this year. That's a
             lot of people to thank!
@@ -137,7 +144,19 @@ export default function AppreciationStation() {
           </button>
         </form>
       </div>
-      {thankYous && thankYous.length > 0 && (
+      {nameNotFound && (
+        <div className="Grid Grid--topSpacing Grid--noBottomSpacing">
+          <div className="GridItem GridItem--full">
+            <p>
+              <strong>
+                Whoops, looks like we don't know anyone with that name. Check
+                your spelling and try again.
+              </strong>
+            </p>
+          </div>
+        </div>
+      )}
+      {shouldShowThankYouCard && (
         <ThankYouCard
           member={thankYous[currentVisibleThankYouIndex].member}
           message={thankYous[currentVisibleThankYouIndex].message}

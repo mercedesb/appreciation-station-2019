@@ -55,8 +55,12 @@ $column-gap: 40px;
 
   &--smallerSpacing {
     @include media($min-desktop) {
-      padding: 0 0 $base-spacing;
+      padding-bottom: $base-spacing;
     }
+  }
+
+  &--noBottomSpacing {
+    padding-bottom: 0;
   }
 }
 

@@ -11,7 +11,7 @@ export default function ThankYouLetter() {
         alt="Short Note text"
       />
       <h2 className="h1 Section-heading">Thank you</h2>
-      <div className="Grid Grid--small">
+      <div className="Grid Grid--small Grid--smallerSpacing">
         <div className="GridItem GridItem--full">
           <p className="Subtitle">
             What started as a little "what if..." has quickly grown to a
