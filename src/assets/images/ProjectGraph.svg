@@ -7,92 +7,88 @@
         <rect id="path-1" x="0" y="0" width="808" height="784"></rect>
     </defs>
     <g id="1-Year-Anniversary" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Homepage-" transform="translate(-789.000000, -3656.000000)">
-            <g id="Graph-Copy" transform="translate(789.000000, 3656.000000)">
+        <g id="Homepage-" transform="translate(-789.000000, -3494.000000)">
+            <g id="Graph-Copy" transform="translate(789.000000, 3494.000000)">
                 <mask id="mask-2" fill="white">
                     <use xlink:href="#path-1"></use>
                 </mask>
                 <use id="Mask" fill="#0C1915" fill-rule="nonzero" xlink:href="#path-1"></use>
                 <text id="React" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="181.736" y="182">React</tspan>
+                    <tspan x="181.736" y="188">React</tspan>
                 </text>
                 <text id="React-Native-Copy" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="135.656" y="386">React Native</tspan>
+                    <tspan x="135.656" y="392">React Native</tspan>
                 </text>
                 <text id="Javascript-(vanilla-Copy" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="79.656" y="216">Javascript (vanilla js)</tspan>
-                </text>
-                <text id="JS" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="202.776" y="522">JS</tspan>
+                    <tspan x="79.656" y="222">Javascript (vanilla js)</tspan>
                 </text>
                 <text id="Rails" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="187.176" y="590">Rails</tspan>
+                    <tspan x="187.176" y="562">Rails</tspan>
                 </text>
                 <text id="Python" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="170.936" y="284">Python</tspan>
+                    <tspan x="170.936" y="290">Python</tspan>
                 </text>
                 <text id="SQL" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="192.056" y="454">SQL</tspan>
+                    <tspan x="192.056" y="460">SQL</tspan>
                 </text>
                 <text id="Java" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="188.04" y="318">Java</tspan>
+                    <tspan x="188.04" y="324">Java</tspan>
                 </text>
                 <text id="Node" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="183.16" y="352">Node</tspan>
+                    <tspan x="183.16" y="358">Node</tspan>
                 </text>
                 <text id="Ruby-on-Rails" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="129.288" y="250">Ruby on Rails</tspan>
+                    <tspan x="129.288" y="256">Ruby on Rails</tspan>
                 </text>
                 <text id="PHP" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="190.456" y="556">PHP</tspan>
+                    <tspan x="190.456" y="528">PHP</tspan>
                 </text>
                 <text id="jQuery-Copy" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="174.36" y="420">jQuery</tspan>
+                    <tspan x="174.36" y="426">jQuery</tspan>
                 </text>
                 <text id="Django" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="171.88" y="624">Django</tspan>
+                    <tspan x="171.88" y="596">Django</tspan>
                 </text>
                 <text id="Angular" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="167.08" y="488">Angular</tspan>
+                    <tspan x="167.08" y="494">Angular</tspan>
                 </text>
                 <text id="Vue" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="194.6" y="658">Vue</tspan>
+                    <tspan x="194.6" y="630">Vue</tspan>
                 </text>
                 <text id="CSS" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="193.384" y="692">CSS</tspan>
+                    <tspan x="193.384" y="664">CSS</tspan>
                 </text>
                 <text id="0" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="234.048" y="732">0</tspan>
+                    <tspan x="234.048" y="710">0</tspan>
                 </text>
                 <text id="10" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="375.096" y="732">10</tspan>
+                    <tspan x="375.096" y="710">10</tspan>
                 </text>
                 <text id="20" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="520.096" y="732">20</tspan>
+                    <tspan x="520.096" y="710">20</tspan>
                 </text>
                 <text id="30" mask="url(#mask-2)" font-family="SourceSansPro-Regular, Source Sans Pro" font-size="16" font-weight="normal" fill="#FFFFFF">
-                    <tspan x="665.096" y="732">30</tspan>
+                    <tspan x="665.096" y="710">30</tspan>
                 </text>
-                <path d="M240,366 L268,366 C269.104569,366 270,366.895431 270,368 L270,394 C270,395.104569 269.104569,396 268,396 L240,396 L240,366 Z" id="Rectangle-Copy-2" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M240,196 L376,196 C377.104569,196 378,196.895431 378,198 L378,224 C378,225.104569 377.104569,226 376,226 L240,226 L240,196 Z" id="Rectangle-Copy-25" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M240,502 L258,502 C259.104569,502 260,502.895431 260,504 L260,530 C260,531.104569 259.104569,532 258,532 L240,532 L240,502 Z" id="Rectangle-Copy-12" fill="#4AB593" mask="url(#mask-2)"></path>
-                <path d="M240,570 L248,570 C249.104569,570 250,570.895431 250,572 L250,598 C250,599.104569 249.104569,600 248,600 L240,600 L240,570 Z" id="Rectangle-Copy-13" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M240,264 L305,264 C306.104569,264 307,264.895431 307,266 L307,292 C307,293.104569 306.104569,294 305,294 L240,294 L240,264 Z" id="Rectangle-Copy-14" fill="#4AB593" mask="url(#mask-2)"></path>
-                <path d="M240,434 L258,434 C259.104569,434 260,434.895431 260,436 L260,462 C260,463.104569 259.104569,464 258,464 L240,464 L240,434 Z" id="Rectangle-Copy-15" fill="#4AB593" mask="url(#mask-2)"></path>
-                <path d="M240,298 L288,298 C289.104569,298 290,298.895431 290,300 L290,326 C290,327.104569 289.104569,328 288,328 L240,328 L240,298 Z" id="Rectangle-Copy-16" fill="#4AB593" mask="url(#mask-2)"></path>
-                <path d="M240,332 L288,332 C289.104569,332 290,332.895431 290,334 L290,360 C290,361.104569 289.104569,362 288,362 L240,362 L240,332 Z" id="Rectangle-Copy-17" fill="#4AB593" mask="url(#mask-2)"></path>
-                <path d="M240,230 L318,230 C319.104569,230 320,230.895431 320,232 L320,258 C320,259.104569 319.104569,260 318,260 L240,260 L240,230 Z" id="Rectangle-Copy-18" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M240,536 L248,536 C249.104569,536 250,536.895431 250,538 L250,564 C250,565.104569 249.104569,566 248,566 L240,566 L240,536 Z" id="Rectangle-Copy-19" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M240,400 L268,400 C269.104569,400 270,400.895431 270,402 L270,428 C270,429.104569 269.104569,430 268,430 L240,430 L240,400 Z" id="Rectangle-Copy-26" fill="#4AB593" mask="url(#mask-2)"></path>
-                <path d="M240,604 L248,604 C249.104569,604 250,604.895431 250,606 L250,632 C250,633.104569 249.104569,634 248,634 L240,634 L240,604 Z" id="Rectangle-Copy-21" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M240,468 L258,468 C259.104569,468 260,468.895431 260,470 L260,496 C260,497.104569 259.104569,498 258,498 L240,498 L240,468 Z" id="Rectangle-Copy-22" fill="#4AB593" mask="url(#mask-2)"></path>
-                <path d="M240,638 L248,638 C249.104569,638 250,638.895431 250,640 L250,666 C250,667.104569 249.104569,668 248,668 L240,668 L240,638 Z" id="Rectangle-Copy-23" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <path d="M240,672 L248,672 C249.104569,672 250,672.895431 250,674 L250,700 C250,701.104569 249.104569,702 248,702 L240,702 L240,672 Z" id="Rectangle-Copy-24" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
-                <polygon id="Line" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="236 148 236 717.675378 240 717.675378 240 148"></polygon>
-                <polygon id="Line-Copy" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="382.75 149.75 382.75 715.925378 383.25 715.925378 383.25 149.75"></polygon>
-                <polygon id="Line-Copy-2" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="527.75 149.75 527.75 715.925378 528.25 715.925378 528.25 149.75"></polygon>
-                <polygon id="Line-Copy-3" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="672.75 149.75 672.75 715.925378 673.25 715.925378 673.25 149.75"></polygon>
-                <path d="M240,162 L665,162 C666.104569,162 667,162.895431 667,164 L667,190 C667,191.104569 666.104569,192 665,192 L240,192 L240,162 Z" id="Rectangle" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,372 L268,372 C269.104569,372 270,372.895431 270,374 L270,400 C270,401.104569 269.104569,402 268,402 L240,402 L240,372 Z" id="Rectangle-Copy-2" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,542 L248,542 C249.104569,542 250,542.895431 250,544 L250,570 C250,571.104569 249.104569,572 248,572 L240,572 L240,542 Z" id="Rectangle-Copy-13" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,270 L305,270 C306.104569,270 307,270.895431 307,272 L307,298 C307,299.104569 306.104569,300 305,300 L240,300 L240,270 Z" id="Rectangle-Copy-14" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,440 L258,440 C259.104569,440 260,440.895431 260,442 L260,468 C260,469.104569 259.104569,470 258,470 L240,470 L240,440 Z" id="Rectangle-Copy-15" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,304 L288,304 C289.104569,304 290,304.895431 290,306 L290,332 C290,333.104569 289.104569,334 288,334 L240,334 L240,304 Z" id="Rectangle-Copy-16" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,338 L288,338 C289.104569,338 290,338.895431 290,340 L290,366 C290,367.104569 289.104569,368 288,368 L240,368 L240,338 Z" id="Rectangle-Copy-17" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,236 L318,236 C319.104569,236 320,236.895431 320,238 L320,264 C320,265.104569 319.104569,266 318,266 L240,266 L240,236 Z" id="Rectangle-Copy-18" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,508 L248,508 C249.104569,508 250,508.895431 250,510 L250,536 C250,537.104569 249.104569,538 248,538 L240,538 L240,508 Z" id="Rectangle-Copy-19" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,406 L268,406 C269.104569,406 270,406.895431 270,408 L270,434 C270,435.104569 269.104569,436 268,436 L240,436 L240,406 Z" id="Rectangle-Copy-26" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,576 L248,576 C249.104569,576 250,576.895431 250,578 L250,604 C250,605.104569 249.104569,606 248,606 L240,606 L240,576 Z" id="Rectangle-Copy-21" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,474 L258,474 C259.104569,474 260,474.895431 260,476 L260,502 C260,503.104569 259.104569,504 258,504 L240,504 L240,474 Z" id="Rectangle-Copy-22" fill="#4AB593" mask="url(#mask-2)"></path>
+                <path d="M240,610 L248,610 C249.104569,610 250,610.895431 250,612 L250,638 C250,639.104569 249.104569,640 248,640 L240,640 L240,610 Z" id="Rectangle-Copy-23" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,644 L248,644 C249.104569,644 250,644.895431 250,646 L250,672 C250,673.104569 249.104569,674 248,674 L240,674 L240,644 Z" id="Rectangle-Copy-24" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <polygon id="Line" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="236 154 236 691 240 691 240 154"></polygon>
+                <polygon id="Line-Copy" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="383.25 156 383.25 689 383.75 689 383.75 156"></polygon>
+                <polygon id="Line-Copy-2" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="527.25 156 527.25 689 527.75 689 527.75 156"></polygon>
+                <polygon id="Line-Copy-3" fill="#F7F7F7" fill-rule="nonzero" mask="url(#mask-2)" points="673.25 156 673.25 689 673.75 689 673.75 156"></polygon>
+                <path d="M240,168 L665,168 C666.104569,168 667,168.895431 667,170 L667,196 C667,197.104569 666.104569,198 665,198 L240,198 L240,168 Z" id="Rectangle" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M240,202 L396,202 C397.104569,202 398,202.895431 398,204 L398,230 C398,231.104569 397.104569,232 396,232 L240,232 L240,202 Z" id="Rectangle-Copy-25" fill="#4AB593" fill-rule="nonzero" mask="url(#mask-2)"></path>
                 <text id="Projects-by-Language" mask="url(#mask-2)" font-family="GothicA1-Bold, Gothic A1" font-size="40" font-weight="bold" fill="#FFFFFF">
                     <tspan x="198.304688" y="86">Projects by Language</tspan>
                 </text>

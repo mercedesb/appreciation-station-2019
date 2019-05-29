@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { AppreciationStationConfig } from "../lib/data";
 import ThankYouCard from "./ThankYouCard";
 import WeDidIt from "../assets/images/WeDidIt.svg";
+import PreviousNextArrow from "../assets/images/PreviousNextArrow.svg";
 
 export default function AppreciationStation() {
   const [thankYous, setThankYous] = useState([]);
@@ -72,20 +73,68 @@ export default function AppreciationStation() {
     setCurrentVisibleThankYouIndex(indexToBeVisible);
   }
 
+  function renderPrevArrow() {
+    const isHiddenClassName =
+      currentVisibleThankYouIndex <= 0 ? "is-hidden" : "";
+    const className = `Prev is-clickable ${isHiddenClassName}`;
+
+    return (
+      <img
+        src={PreviousNextArrow}
+        className={className}
+        onClick={() =>
+          setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex - 1)
+        }
+        alt="Go to previous thank you card"
+      />
+    );
+  }
+
+  function renderNextArrow() {
+    const isHiddenClassName =
+      currentVisibleThankYouIndex >= thankYous.length - 1 ? "is-hidden" : "";
+    const className = `Next is-clickable ${isHiddenClassName}`;
+    return (
+      <img
+        src={PreviousNextArrow}
+        className={className}
+        onClick={() =>
+          setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex + 1)
+        }
+        alt="Go to next thank you card"
+      />
+    );
+  }
+
   return (
     <section className="Section">
       <img className="BackgroundHeading" src={WeDidIt} alt="We Did It text" />
       <h2 className="h1 Section-heading">Appreciation Station</h2>
+      <div className="Grid Grid--smallerSpacing">
+        <div className="GridItem GridItem--full">
+          <p className="Subtitle">
+            Did you have a great pairing experience and want to let your pair
+            know you appreciate them? Did you have a great takeaway from one of
+            lightning talks? Search for their name and send them a thank you
+            note. We've had 42 different mentors, 66 different mentees, 16
+            different speakers, and 11 different sponsors this year. That's a
+            lot of people to thank!
+          </p>
+        </div>
+      </div>
       <div>
         <form onSubmit={search}>
           <label htmlFor="thankYouSearch">
             <input
               type="text"
+              className="SearchInput"
               placeholder="Search for someone you'd like to thank"
               onChange={e => setSearchName(e.target.value)}
             />
           </label>
-          <button type="submit">Search!</button>
+          <button type="submit" className="SearchButton">
+            Search
+          </button>
         </form>
       </div>
       {thankYous && thankYous.length > 0 && (
@@ -95,30 +144,10 @@ export default function AppreciationStation() {
           backgroundImage={
             thankYous[currentVisibleThankYouIndex].backgroundImage
           }
+          prevArrow={renderPrevArrow}
+          nextArrow={renderNextArrow}
         />
       )}
-      <div>
-        {currentVisibleThankYouIndex > 0 && (
-          <span
-            className="is-clickable"
-            onClick={() =>
-              setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex - 1)
-            }
-          >
-            {"< Prev"}
-          </span>
-        )}{" "}
-        {currentVisibleThankYouIndex < thankYous.length - 1 && (
-          <span
-            className="is-clickable"
-            onClick={() =>
-              setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex + 1)
-            }
-          >
-            {"Next >"}
-          </span>
-        )}
-      </div>
     </section>
   );
 }

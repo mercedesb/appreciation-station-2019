@@ -53,31 +53,10 @@ $column-gap: 40px;
     padding-bottom: $base-spacing;
   }
 
-  &--scrollOnMobile {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    .GridItem {
-      flex: 0 0 auto;
-    }
-
+  &--smallerSpacing {
     @include media($min-desktop) {
-      display: grid;
+      padding: 0 0 $base-spacing;
     }
-  }
-
-  &--overlap {
-    margin-top: -$base-spacing;
-  }
-
-  &--noGap {
-    column-gap: 0;
   }
 }
 

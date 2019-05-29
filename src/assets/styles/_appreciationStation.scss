@@ -1,0 +1,53 @@
+$search-input-width: 600px;
+$search-image-padding: 40px;
+
+.SearchInput {
+  background: url(../images/Search.svg) no-repeat scroll $search-input-width -
+    $search-image-padding $input-padding;
+  padding-right: $search-image-padding;
+  width: $search-input-width;
+}
+
+.SearchButton {
+  display: none;
+}
+
+.ThankYouCardContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Prev {
+  transform: rotate(180deg);
+  margin-right: $small-spacing;
+
+  &.is-hidden {
+    visibility: hidden;
+  }
+}
+
+.Next {
+  margin-left: $small-spacing;
+
+  &.is-hidden {
+    visibility: hidden;
+  }
+}
+
+.ThankYouCard {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: $base-spacing;
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    margin-bottom: $small-spacing;
+
+    @include media($min-desktop) {
+      margin-bottom: $base-spacing;
+    }
+  }
+}

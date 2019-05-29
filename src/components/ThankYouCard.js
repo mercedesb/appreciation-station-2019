@@ -170,10 +170,14 @@ export default class ThankYouCard extends Component {
     return (
       <React.Fragment>
         <div className="ThankYouCardContainer">
-          <canvas ref={this.canvasRef} />
+          {this.props.prevArrow()}
+          <div className="ThankYouCard">
+            <canvas ref={this.canvasRef} />
+          </div>
+          {this.props.nextArrow()}
         </div>
         <div>
-          <span onClick={this.share}>Share</span>
+          <button onClick={this.share}>Share on Twitter</button>
         </div>
       </React.Fragment>
     );
