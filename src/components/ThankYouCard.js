@@ -14,31 +14,29 @@ export default class ThankYouCard extends Component {
   constructor(props) {
     super(props);
     this.canvasRef = React.createRef();
-    this.state = {
-      img: null
-    };
+    this.imageRef = React.createRef();
   }
 
   componentDidMount() {
-    let img = this.createImageForCanvas();
-    img.addEventListener("load", this.drawCanvas, false);
+    this.createImageForCanvas();
+    this.setImageSrc();
+    this.imageRef.current.addEventListener("load", this.drawCanvas, false);
     window.addEventListener("resize", this.drawCanvas);
-    this.setState({ img: img });
   }
 
   componentDidUpdate() {
-    this.drawCanvas();
+    this.setImageSrc();
   }
 
   componentWillUnmount() {
-    this.state.img.removeEventListener("load", this.drawCanvas);
+    this.imageRef.current.removeEventListener("load", this.drawCanvas);
     window.removeEventListener("resize", this.drawCanvas);
   }
 
   createImageForCanvas = () => {
-    var img = new Image(); // Create new img element
+    var img = new Image();
+    this.imageRef.current = img;
     img.crossOrigin = "anonymous";
-    img.src = this.props.backgroundImage.file.url;
     return img;
   };
 
@@ -47,7 +45,13 @@ export default class ThankYouCard extends Component {
     canvas.height = height;
   };
 
-  drawBackgroundImage = (context, img, width, height) => {
+  setImageSrc = () => {
+    const img = this.imageRef.current;
+    img.src = this.props.backgroundImage.file.url;
+  };
+
+  drawBackgroundImage = (context, width, height) => {
+    const img = this.imageRef.current;
     context.drawImage(img, 0, 0, width, height);
   };
 
@@ -141,7 +145,7 @@ export default class ThankYouCard extends Component {
 
     const context = canvas.getContext("2d");
 
-    this.drawBackgroundImage(context, this.state.img, width, height);
+    this.drawBackgroundImage(context, width, height);
     this.drawText(context, width, height);
   };
 
