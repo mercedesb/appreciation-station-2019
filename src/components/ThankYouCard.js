@@ -1,6 +1,15 @@
 import React, { Component } from "react";
 import { AppreciationStationConfig } from "../lib/data";
 
+const CANVAS_CONFIG = {
+  breakPoint: 720,
+  smallFontSize: 24,
+  largeFontSize: 48,
+  lineSpacing: 10,
+  smallSpacing: 20,
+  largeSpacing: 30
+};
+
 export default class ThankYouCard extends Component {
   constructor(props) {
     super(props);
@@ -48,38 +57,33 @@ export default class ThankYouCard extends Component {
       this.props.member.name
     );
 
-    const breakPoint = 720;
-    const smallFontSize = 24;
-    const largeFontSize = 48;
-    const fontSize = width < breakPoint ? smallFontSize : largeFontSize;
-    const lineSpacing = 10;
-    const lineHeight = fontSize + lineSpacing;
+    const fontSize =
+      width < CANVAS_CONFIG.breakPoint
+        ? CANVAS_CONFIG.smallFontSize
+        : CANVAS_CONFIG.largeFontSize;
 
-    const baseSpacing = width < breakPoint ? 20 : 30;
+    const lineHeight = fontSize + CANVAS_CONFIG.lineSpacing;
+
+    const baseSpacing =
+      width < CANVAS_CONFIG.breakPoint
+        ? CANVAS_CONFIG.smallSpacing
+        : CANVAS_CONFIG.largeSpacing;
+
     const maxWidth = width * 0.75;
 
     context.font = `600 ${fontSize}px Merriweather`;
     context.fillStyle = "#ffffff";
 
-    let leftPosition, topPosition;
-
     const lines = this.getLines(context, canvasMessage, maxWidth);
     lines.forEach((line, index) => {
-      if (this.props.backgroundImage.textPosition === "topLeft") {
-        const multiplier = index + 1;
-        const space = multiplier * lineHeight + baseSpacing;
-
-        leftPosition = baseSpacing;
-        topPosition = space;
-      } else if (this.props.backgroundImage.textPosition === "bottomLeft") {
-        const multiplier = lines.length - 1 - index;
-        const space = multiplier * lineHeight + baseSpacing;
-
-        leftPosition = baseSpacing;
-        topPosition = height - space;
-      }
-
-      context.fillText(line, leftPosition, topPosition, maxWidth);
+      const position = this.calculateTextPosition(
+        index,
+        lines.length,
+        lineHeight,
+        baseSpacing,
+        height
+      );
+      context.fillText(line, position.left, position.top, maxWidth);
     });
   };
 
@@ -100,6 +104,31 @@ export default class ThankYouCard extends Component {
     }
     lines.push(currentLine);
     return lines;
+  };
+
+  calculateTextPosition = (
+    currentIndex,
+    numOfLines,
+    lineHeight,
+    baseSpacing,
+    height
+  ) => {
+    if (this.props.backgroundImage.textPosition === "topLeft") {
+      const multiplier = currentIndex + 1;
+      const space = multiplier * lineHeight + baseSpacing;
+      return {
+        left: baseSpacing,
+        top: space
+      };
+    } else if (this.props.backgroundImage.textPosition === "bottomLeft") {
+      const multiplier = numOfLines - 1 - currentIndex;
+      const space = multiplier * lineHeight + baseSpacing;
+
+      return {
+        left: baseSpacing,
+        top: height - space
+      };
+    }
   };
 
   drawCanvas = () => {
