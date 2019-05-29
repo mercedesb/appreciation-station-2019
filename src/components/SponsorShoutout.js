@@ -83,7 +83,7 @@ export default function SponsorShoutout() {
   };
 
   return (
-    <React.Fragment>
+    <section className="Section">
       <img className="BackgroundHeading" src={Sponsors} alt="Sponsors text" />
       <h2 className="h1 Section-heading">Special Shoutout</h2>
       <div className="Grid Grid--topSpacing Grid--twelve">
@@ -91,6 +91,6 @@ export default function SponsorShoutout() {
           renderSponsorLogo(sponsor.name, sponsor.logo, sponsor.isPremium)
         )}
       </div>
-    </React.Fragment>
+    </section>
   );
 }

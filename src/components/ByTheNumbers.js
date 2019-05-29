@@ -60,10 +60,12 @@ export default function ByTheNumbers() {
   };
 
   return (
-    <div className="Grid StatisticsContainer">
-      {statistics.map(stat =>
-        renderStatistic(stat.number, stat.text, stat.color)
-      )}
-    </div>
+    <section className="Section">
+      <div className="Grid StatisticsContainer">
+        {statistics.map(stat =>
+          renderStatistic(stat.number, stat.text, stat.color)
+        )}
+      </div>
+    </section>
   );
 }

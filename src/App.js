@@ -11,21 +11,11 @@ function App() {
   return (
     <React.Fragment>
       <ThankYouCover />
-      <section className="Section">
-        <ByTheNumbers />
-      </section>
-      <section className="Section">
-        <AppreciationStation />
-      </section>
-      <section className="Section">
-        <ProjectBreakdown />
-      </section>
-      <section className="Section">
-        <ThankYouLetter />
-      </section>
-      <section className="Section">
-        <SponsorShoutout />
-      </section>
+      <ByTheNumbers />
+      <AppreciationStation />
+      <ProjectBreakdown />
+      <ThankYouLetter />
+      <SponsorShoutout />
       <Footer />
     </React.Fragment>
   );

@@ -4,7 +4,7 @@ import ConfettiBall from "../assets/images/ConfettiBall.svg";
 
 export default function ThankYouLetter() {
   return (
-    <React.Fragment>
+    <section className="Section">
       <img
         className="BackgroundHeading"
         src={ShortNote}
@@ -78,6 +78,6 @@ export default function ThankYouLetter() {
         alt="Decorative confetti"
         className="Confetti Confetti--med Confetti--four"
       />
-    </React.Fragment>
+    </section>
   );
 }

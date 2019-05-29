@@ -73,7 +73,7 @@ export default function AppreciationStation() {
   }
 
   return (
-    <React.Fragment>
+    <section className="Section">
       <img className="BackgroundHeading" src={WeDidIt} alt="We Did It text" />
       <h2 className="h1 Section-heading">Appreciation Station</h2>
       <div>
@@ -119,6 +119,6 @@ export default function AppreciationStation() {
           </span>
         )}
       </div>
-    </React.Fragment>
+    </section>
   );
 }

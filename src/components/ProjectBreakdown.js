@@ -4,7 +4,7 @@ import ProjectGraph from "../assets/images/ProjectGraph.svg";
 
 export default function ProjectBreakdown() {
   return (
-    <React.Fragment>
+    <section className="Section">
       <img className="BackgroundHeading" src={Community} alt="Community text" />
       <h2 className="h1 Section-heading">Our People, Our Work</h2>
       <div className="Grid">
@@ -32,6 +32,6 @@ export default function ProjectBreakdown() {
           <img src={ProjectGraph} alt="Projects" />
         </div>
       </div>
-    </React.Fragment>
+    </section>
   );
 }
