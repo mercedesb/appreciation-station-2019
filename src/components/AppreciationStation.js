@@ -5,6 +5,7 @@ import WeDidIt from "../assets/images/WeDidIt.svg";
 
 export default function AppreciationStation() {
   const [thankYous, setThankYous] = useState([]);
+  const [searchName, setSearchName] = useState("");
   const [
     currentVisibleThankYouIndex,
     setCurrentVisibleThankYouIndex
@@ -62,29 +63,61 @@ export default function AppreciationStation() {
     return array[Math.floor(Math.random() * array.length)];
   }
 
+  function search(e) {
+    e.preventDefault();
+
+    const indexToBeVisible = thankYous.findIndex(ty =>
+      ty.member.name.includes(searchName)
+    );
+    setCurrentVisibleThankYouIndex(indexToBeVisible);
+  }
+
   return (
     <React.Fragment>
       <img className="BackgroundHeading" src={WeDidIt} alt="We Did It text" />
       <h2 className="h1 Section-heading">Appreciation Station</h2>
-      <div className="">
-        {thankYous && thankYous.length > 0 && (
-          <ThankYouCard
-            member={thankYous[currentVisibleThankYouIndex].member}
-            message={thankYous[currentVisibleThankYouIndex].message}
-            backgroundImage={
-              thankYous[currentVisibleThankYouIndex].backgroundImage
-            }
-          />
-        )}
-        <div>
+      <div>
+        <form onSubmit={search}>
+          <label htmlFor="thankYouSearch">
+            <input
+              type="text"
+              placeholder="Search for someone you'd like to thank"
+              onChange={e => setSearchName(e.target.value)}
+            />
+          </label>
+          <button type="submit">Search!</button>
+        </form>
+      </div>
+      {thankYous && thankYous.length > 0 && (
+        <ThankYouCard
+          member={thankYous[currentVisibleThankYouIndex].member}
+          message={thankYous[currentVisibleThankYouIndex].message}
+          backgroundImage={
+            thankYous[currentVisibleThankYouIndex].backgroundImage
+          }
+        />
+      )}
+      <div>
+        {currentVisibleThankYouIndex > 0 && (
           <span
+            className="is-clickable"
+            onClick={() =>
+              setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex - 1)
+            }
+          >
+            {"< Prev"}
+          </span>
+        )}{" "}
+        {currentVisibleThankYouIndex < thankYous.length - 1 && (
+          <span
+            className="is-clickable"
             onClick={() =>
               setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex + 1)
             }
           >
-            Next >
+            {"Next >"}
           </span>
-        </div>
+        )}
       </div>
     </React.Fragment>
   );
