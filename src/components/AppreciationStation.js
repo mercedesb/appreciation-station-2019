@@ -22,12 +22,14 @@ export default function AppreciationStation() {
       const mentorMessages = receivedMessages.filter(msg => msg.isMentor);
       const menteeMessages = receivedMessages.filter(msg => msg.isMentee);
       const speakerMessages = receivedMessages.filter(msg => msg.isSpeaker);
+      const sponsorMessages = receivedMessages.filter(msg => msg.isSponsor);
 
       return receivedMembers.map(member => {
         let messages;
         if (member.isMentor) messages = mentorMessages;
         if (member.isMentee) messages = menteeMessages;
         if (member.isSpeaker) messages = speakerMessages;
+        if (member.isSponsor) messages = sponsorMessages;
 
         return {
           member: member,

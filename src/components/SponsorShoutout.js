@@ -30,7 +30,7 @@ export default function SponsorShoutout() {
       logo: TandemLogo
     },
     {
-      name: "SitterCity",
+      name: "Sittercity",
       isPremium: false,
       logo: SitterCityLogo
     },
@@ -60,7 +60,7 @@ export default function SponsorShoutout() {
       logo: ActiveCampaignLogo
     },
     {
-      name: "HomeChef",
+      name: "Home Chef",
       isPremium: false,
       logo: HomeChefLogo
     },
