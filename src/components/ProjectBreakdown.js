@@ -10,22 +10,26 @@ export default function ProjectBreakdown() {
       <div className="Grid">
         <div className="GridItem GridItem--third">
           <p className="Subtitle">
-            Carrot cake sesame snaps marshmallow sugar plum cake. Gingerbread
-            chocolate bar jujubes marshmallow marzipan cake chupa chups gummies.
-            Gingerbread caramels gummi bears icing jelly beans gummi bears.
+            We know that if you have written code, you are a real developer — no
+            matter what language, how many lines, or for how long. And we're
+            here to support you, no matter what framework or tools you prefer.
           </p>
-
           <p>
-            Gummi bears toffee chupa chups jelly-o. Danish cupcake ice cream.
-            Candy canes topping donut cake. Cake apple pie chupa chups bonbon
-            chupa chups muffin.
+            As a polyglot community, we welcome projects of all types and sizes.
+            In our first year, we pair programmed on 15 different languages and
+            frameworks.
           </p>
-
           <p>
-            Apple pie lemon drops chocolate cake jelly pie ice cream gummi bears
-            toffee wafer. Pastry marshmallow danish gummi bears bonbon cookie.
-            Soufflé chocolate cake jelly sugar plum donut. Marzipan sweet roll
-            gummies tart tiramisu oat cake powder sweet cupcake.
+            Our mentors have a wide array of technical experiences and brought
+            their knowledge of{" "}
+            <strong>35 different languages and frameworks</strong> to the table
+            for our mentees to learn from!
+          </p>
+          <p>
+            So whether you're wanting to learn the latest and greatest
+            Javascript framework or you want to hone your evergreen SQL skills,
+            we've got you covered. Bring a project, get feedback, and pair
+            program to level up your development skills.
           </p>
         </div>
         <div className="GridItem GridItem--twoThirds">
