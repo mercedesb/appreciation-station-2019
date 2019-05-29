@@ -134,9 +134,13 @@ export default function AppreciationStation() {
       <div>
         <form onSubmit={search}>
           <label htmlFor="thankYouSearch">
+            <span className="SearchInput-label">
+              Search for someone you'd like to thank
+            </span>
             <input
               type="text"
               className="SearchInput"
+              id="thankYouSearch"
               placeholder="Search for someone you'd like to thank"
               onChange={e => setSearchName(e.target.value)}
             />

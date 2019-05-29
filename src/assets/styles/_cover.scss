@@ -23,6 +23,10 @@ $desktop-text-top-offset: 70px;
     margin-bottom: 0;
   }
 
+  &-title {
+    display: none;
+  }
+
   &-text {
     text-align: center;
     margin-top: $base-spacing;

@@ -6,6 +6,10 @@ $search-image-padding: 40px;
     $search-image-padding $input-padding;
   padding-right: $search-image-padding;
   width: $search-input-width;
+
+  &-label {
+    display: none;
+  }
 }
 
 .SearchButton {
