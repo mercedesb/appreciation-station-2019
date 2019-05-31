@@ -83,10 +83,9 @@ export default class ThankYouCard extends Component {
       this.props.member.name
     );
 
-    canvasMessage = canvasMessage.replace(
-      "'",
-      String.fromCharCode(parseInt(2019, 16))
-    );
+    const singleQuote = String.fromCharCode(8217);
+
+    canvasMessage = canvasMessage.replace("'", singleQuote);
 
     return canvasMessage;
   };
