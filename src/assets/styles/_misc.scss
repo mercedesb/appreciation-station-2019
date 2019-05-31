@@ -8,58 +8,94 @@
   @include media($min-desktop) {
     display: inline-block;
     position: absolute;
-
-    &--small {
-      width: 175px;
-    }
-
-    &--med {
-      width: 200px;
-    }
-
-    &--large {
-      width: 462px;
-    }
-
-    &--one {
-      top: 120px;
-      right: -130px;
-      animation: fade 2.5s ease-in-out infinite;
-      animation-delay: 1s;
-    }
-
-    &--two {
-      top: 360px;
-      left: 200px;
-      animation: fade 2.5s ease-in-out infinite;
-      animation-delay: 2.5s;
-    }
-
-    &--three {
-      top: 700px;
-      left: -100px;
-      animation: fade 2.5s ease-in-out infinite;
-      animation-delay: 3.5s;
-    }
-
-    &--four {
-      top: 650px;
-      right: 230px;
-      animation: fade 2.5s ease-in-out infinite;
-      animation-delay: 1.5s;
-    }
+    animation: confetti-fade 8s linear infinite;
   }
 }
 
-@keyframes fade {
+$large-confetti: 462px;
+$med-confetti: 200px;
+$small-confetti: 175px;
+$first-position-top: 120px;
+$first-position-left: initial;
+$first-position-right: -130px;
+$second-position-top: 360px;
+$second-position-left: 200px;
+$second-position-right: initial;
+$third-position-top: 700px;
+$third-position-left: -100px;
+$third-position-right: initial;
+$fourth-position-top: 650px;
+$fourth-position-left: initial;
+$fourth-position-right: 230px;
+
+@keyframes confetti-fade {
   0% {
+    opacity: 0;
+    width: $large-confetti;
+    top: $first-position-top;
+    left: $first-position-left;
+    right: $first-position-right;
+  }
+  12% {
     opacity: 1;
+  }
+  24% {
+    opacity: 0;
+    width: $large-confetti;
+    top: $first-position-top;
+    left: $first-position-left;
+    right: $first-position-right;
+  }
+  25% {
+    opacity: 0;
+    width: $small-confetti;
+    top: $second-position-top;
+    left: $second-position-left;
+    right: $second-position-right;
+  }
+  37% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 0;
+    width: $small-confetti;
+    top: $second-position-top;
+    left: $second-position-left;
+    right: $second-position-right;
   }
   50% {
     opacity: 0;
+    width: $large-confetti;
+    top: $third-position-top;
+    left: $third-position-left;
+    right: $third-position-right;
+  }
+  62% {
+    opacity: 1;
+  }
+  74% {
+    opacity: 0;
+    width: $large-confetti;
+    top: $third-position-top;
+    left: $third-position-left;
+    right: $third-position-right;
+  }
+  75% {
+    opacity: 0;
+    width: $med-confetti;
+    top: $fourth-position-top;
+    left: $fourth-position-left;
+    right: $fourth-position-right;
+  }
+  87% {
+    opacity: 1;
   }
   100% {
-    opacity: 1;
+    opacity: 0;
+    width: $med-confetti;
+    top: $fourth-position-top;
+    left: $fourth-position-left;
+    right: $fourth-position-right;
   }
 }
 

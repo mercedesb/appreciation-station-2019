@@ -93,26 +93,7 @@ export default function ThankYouLetter() {
           </p>
         </div>
       </div>
-      <img
-        src={ConfettiBall}
-        alt="Decorative confetti"
-        className="Confetti Confetti--large Confetti--one"
-      />
-      <img
-        src={ConfettiBall}
-        alt="Decorative confetti"
-        className="Confetti Confetti--small Confetti--two"
-      />
-      <img
-        src={ConfettiBall}
-        alt="Decorative confetti"
-        className="Confetti Confetti--large Confetti--three"
-      />
-      <img
-        src={ConfettiBall}
-        alt="Decorative confetti"
-        className="Confetti Confetti--med Confetti--four"
-      />
+      <img src={ConfettiBall} alt="Decorative confetti" className="Confetti" />
     </section>
   );
 }
