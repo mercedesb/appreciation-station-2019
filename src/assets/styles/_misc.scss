@@ -24,7 +24,7 @@
     &--one {
       top: 120px;
       right: -130px;
-      animation: fade 3s ease-in-out infinite;
+      animation: fade 2.5s ease-in-out infinite;
       animation-delay: 1s;
     }
 
@@ -38,14 +38,14 @@
     &--three {
       top: 700px;
       left: -100px;
-      animation: fade 4s ease-in-out infinite;
+      animation: fade 2.5s ease-in-out infinite;
       animation-delay: 3.5s;
     }
 
     &--four {
       top: 650px;
       right: 230px;
-      animation: fade 2s ease-in-out infinite;
+      animation: fade 2.5s ease-in-out infinite;
       animation-delay: 1.5s;
     }
   }

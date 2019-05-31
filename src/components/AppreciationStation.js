@@ -117,7 +117,11 @@ export default function AppreciationStation() {
 
   return (
     <section className="Section">
-      <img className="BackgroundHeading" src={WeDidIt} alt="We Did It text" />
+      <img
+        className="BackgroundHeading BackgroundHeading--extraSpacing"
+        src={WeDidIt}
+        alt="We Did It text"
+      />
       <h2 className="h1 Section-heading">Appreciation Station</h2>
       <div className="Grid Grid--noBottomSpacing">
         <div className="GridItem GridItem--full">
@@ -141,7 +145,7 @@ export default function AppreciationStation() {
               type="text"
               className="SearchInput"
               id="thankYouSearch"
-              placeholder="Search for someone you'd like to thank"
+              placeholder="Search for name"
               onChange={e => setSearchName(e.target.value)}
             />
           </label>

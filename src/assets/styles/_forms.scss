@@ -1,5 +1,6 @@
 $base-input-height: 50px;
-$input-padding: 10px;
+$input-vertical-padding: 10px;
+$input-horizontal-padding: 15px;
 $placeholder-color: lighten($charcoal, 30%);
 
 input[type="text"] {
@@ -7,7 +8,7 @@ input[type="text"] {
   border: none;
   border-radius: $base-border-radius;
   background-color: $gray;
-  padding: $input-padding;
+  padding: $input-vertical-padding $input-horizontal-padding;
 }
 
 ::-webkit-input-placeholder {

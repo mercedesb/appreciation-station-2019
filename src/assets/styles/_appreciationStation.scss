@@ -1,11 +1,22 @@
+$search-input-mobile-width: 300px;
 $search-input-width: 600px;
-$search-image-padding: 40px;
+$search-image-padding: 50px;
+$search-image-mobile-position: $search-input-mobile-width -
+  $search-image-padding;
+$search-image-position: $search-input-width - $search-image-padding;
 
 .SearchInput {
-  background: url(../images/Search.svg) no-repeat scroll $search-input-width -
-    $search-image-padding $input-padding;
+  background: url(../images/Search.svg) no-repeat scroll
+    $search-image-mobile-position $input-vertical-padding;
   padding-right: $search-image-padding;
-  width: $search-input-width;
+  margin-bottom: $small-spacing;
+  margin-bottom: $base-spacing;
+  width: $search-input-mobile-width;
+
+  @include media($min-desktop) {
+    background-position-x: $search-image-position;
+    width: $search-input-width;
+  }
 
   &-label {
     display: none;
@@ -43,7 +54,6 @@ $search-image-padding: 40px;
 .ThankYouCard {
   width: 100%;
   max-width: 1200px;
-  margin-top: $base-spacing;
 
   canvas {
     width: 100%;
@@ -54,4 +64,8 @@ $search-image-padding: 40px;
       margin-bottom: $base-spacing;
     }
   }
+}
+
+.Share {
+  margin-bottom: $base-spacing;
 }

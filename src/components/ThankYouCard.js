@@ -7,7 +7,8 @@ const CANVAS_CONFIG = {
   largeFontSize: 48,
   lineSpacing: 10,
   smallSpacing: 20,
-  largeSpacing: 30
+  largeLeftSpacing: 60,
+  largeTopSpacing: 60
 };
 
 export default class ThankYouCard extends Component {
@@ -56,11 +57,41 @@ export default class ThankYouCard extends Component {
   };
 
   drawText = (context, width, height) => {
-    const canvasMessage = this.props.message.text.replace(
+    const canvasMessage = this.getCanvasMessage();
+    const textStyle = this.getTextStyleConfig(width);
+
+    context.font = textStyle.font;
+    context.fillStyle = textStyle.fillStyle;
+
+    const lines = this.getLines(context, canvasMessage, textStyle.maxWidth);
+    lines.forEach((line, index) => {
+      const position = this.calculateTextPosition(
+        index,
+        lines.length,
+        textStyle.lineHeight,
+        textStyle.horizontalSpacing,
+        textStyle.verticalSpacing,
+        height
+      );
+      context.fillText(line, position.left, position.top, textStyle.maxWidth);
+    });
+  };
+
+  getCanvasMessage = () => {
+    let canvasMessage = this.props.message.text.replace(
       "{NAME}",
       this.props.member.name
     );
 
+    canvasMessage = canvasMessage.replace(
+      "'",
+      String.fromCharCode(parseInt(2019, 16))
+    );
+
+    return canvasMessage;
+  };
+
+  getTextStyleConfig = width => {
     const fontSize =
       width < CANVAS_CONFIG.breakPoint
         ? CANVAS_CONFIG.smallFontSize
@@ -68,27 +99,30 @@ export default class ThankYouCard extends Component {
 
     const lineHeight = fontSize + CANVAS_CONFIG.lineSpacing;
 
-    const baseSpacing =
+    const horizontalSpacing =
       width < CANVAS_CONFIG.breakPoint
         ? CANVAS_CONFIG.smallSpacing
-        : CANVAS_CONFIG.largeSpacing;
+        : CANVAS_CONFIG.largeLeftSpacing;
 
-    const maxWidth = width * 0.75;
+    const verticalSpacing =
+      width < CANVAS_CONFIG.breakPoint
+        ? CANVAS_CONFIG.smallSpacing
+        : CANVAS_CONFIG.largeTopSpacing;
 
-    context.font = `600 ${fontSize}px Merriweather`;
-    context.fillStyle = "#ffffff";
+    const maxWidth = width * this.props.backgroundImage.maxTextWidth;
 
-    const lines = this.getLines(context, canvasMessage, maxWidth);
-    lines.forEach((line, index) => {
-      const position = this.calculateTextPosition(
-        index,
-        lines.length,
-        lineHeight,
-        baseSpacing,
-        height
-      );
-      context.fillText(line, position.left, position.top, maxWidth);
-    });
+    const font = `600 ${fontSize}px Merriweather`;
+    const fillStyle = "#ffffff";
+
+    return {
+      fontSize,
+      lineHeight,
+      horizontalSpacing,
+      verticalSpacing,
+      maxWidth,
+      font,
+      fillStyle
+    };
   };
 
   getLines = (context, text, maxWidth) => {
@@ -114,22 +148,23 @@ export default class ThankYouCard extends Component {
     currentIndex,
     numOfLines,
     lineHeight,
-    baseSpacing,
+    horizontalSpacing,
+    verticalSpacing,
     height
   ) => {
     if (this.props.backgroundImage.textPosition === "topLeft") {
       const multiplier = currentIndex + 1;
-      const space = multiplier * lineHeight + baseSpacing;
+      const space = multiplier * lineHeight + verticalSpacing / 2;
       return {
-        left: baseSpacing,
+        left: horizontalSpacing,
         top: space
       };
     } else if (this.props.backgroundImage.textPosition === "bottomLeft") {
       const multiplier = numOfLines - 1 - currentIndex;
-      const space = multiplier * lineHeight + baseSpacing;
+      const space = multiplier * lineHeight + verticalSpacing;
 
       return {
-        left: baseSpacing,
+        left: horizontalSpacing,
         top: height - space
       };
     }
@@ -177,7 +212,9 @@ export default class ThankYouCard extends Component {
           {this.props.nextArrow()}
         </div>
         <div>
-          <button onClick={this.share}>Share on Twitter</button>
+          <button className="Share" onClick={this.share}>
+            Share on Twitter
+          </button>
         </div>
       </React.Fragment>
     );
