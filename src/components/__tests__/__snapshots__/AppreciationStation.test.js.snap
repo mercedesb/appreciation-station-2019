@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppreciationStation #render matches snapshot 1`] = `
+<Fragment>
+  <div>
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="thankYouSearch"
+      >
+        <span
+          className="SearchInput-label"
+        >
+          Search for someone you'd like to thank
+        </span>
+        <input
+          className="SearchInput"
+          id="thankYouSearch"
+          onChange={[Function]}
+          placeholder="Search for name"
+          type="text"
+        />
+      </label>
+      <button
+        className="SearchButton"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <ThankYouCard
+    backgroundImage={
+      Object {
+        "file": Object {
+          "url": "http://testurl1.com",
+        },
+      }
+    }
+    member={
+      Object {
+        "isMentor": true,
+        "name": "Test member 1",
+      }
+    }
+    message={
+      Object {
+        "text": "Thank you {NAME} for being a great mentor!",
+      }
+    }
+    nextArrow={[Function]}
+    prevArrow={[Function]}
+  />
+</Fragment>
+`;
+
+exports[`AppreciationStation #search when name is not found renders a ThankYouCard component 1`] = `
+<Fragment>
+  <div>
+    <form
+      onSubmit={[Function]}
+    >
+      <label
+        htmlFor="thankYouSearch"
+      >
+        <span
+          className="SearchInput-label"
+        >
+          Search for someone you'd like to thank
+        </span>
+        <input
+          className="SearchInput"
+          id="thankYouSearch"
+          onChange={[Function]}
+          placeholder="Search for name"
+          type="text"
+        />
+      </label>
+      <button
+        className="SearchButton"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <ThankYouCard
+    backgroundImage={
+      Object {
+        "file": Object {
+          "url": "http://testurl1.com",
+        },
+      }
+    }
+    member={
+      Object {
+        "isMentor": true,
+        "name": "Test member 1",
+      }
+    }
+    message={
+      Object {
+        "text": "Thank you {NAME} for being a great mentor!",
+      }
+    }
+    nextArrow={[Function]}
+    prevArrow={[Function]}
+  />
+</Fragment>
+`;
