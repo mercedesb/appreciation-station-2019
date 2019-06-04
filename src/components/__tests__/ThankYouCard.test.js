@@ -167,10 +167,8 @@ describe("ThankYouCard", () => {
         const config = subject.instance().getTextStyleConfig(width);
 
         expect(config.fontSize).toEqual(CANVAS_CONFIG.largeFontSize);
-        expect(config.horizontalSpacing).toEqual(
-          CANVAS_CONFIG.largeLeftSpacing
-        );
-        expect(config.verticalSpacing).toEqual(CANVAS_CONFIG.largeTopSpacing);
+        expect(config.horizontalSpacing).toEqual(CANVAS_CONFIG.largeSpacing);
+        expect(config.verticalSpacing).toEqual(CANVAS_CONFIG.largeSpacing);
       });
     });
   });
