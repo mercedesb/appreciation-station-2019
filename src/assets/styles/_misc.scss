@@ -8,7 +8,7 @@
   @include media($min-desktop) {
     display: inline-block;
     position: absolute;
-    animation: confetti-fade 8s linear infinite;
+    animation: confetti-fade 6s linear infinite;
   }
 }
 
