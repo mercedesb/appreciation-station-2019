@@ -7,8 +7,7 @@ export const CANVAS_CONFIG = {
   largeFontSize: 48,
   lineSpacing: 10,
   smallSpacing: 20,
-  largeLeftSpacing: 60,
-  largeTopSpacing: 60
+  largeSpacing: 60
 };
 
 export default class ThankYouCard extends Component {
@@ -101,12 +100,12 @@ export default class ThankYouCard extends Component {
     const horizontalSpacing =
       width < CANVAS_CONFIG.breakPoint
         ? CANVAS_CONFIG.smallSpacing
-        : CANVAS_CONFIG.largeLeftSpacing;
+        : CANVAS_CONFIG.largeSpacing;
 
     const verticalSpacing =
       width < CANVAS_CONFIG.breakPoint
         ? CANVAS_CONFIG.smallSpacing
-        : CANVAS_CONFIG.largeTopSpacing;
+        : CANVAS_CONFIG.largeSpacing;
 
     const maxWidth = width * this.props.backgroundImage.maxTextWidth;
 
