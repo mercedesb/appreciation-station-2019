@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { AppreciationStationConfig } from "../lib/data";
 
-const CANVAS_CONFIG = {
+export const CANVAS_CONFIG = {
   breakPoint: 720,
   smallFontSize: 24,
   largeFontSize: 48,

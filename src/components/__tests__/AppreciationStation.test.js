@@ -74,14 +74,4 @@ describe("AppreciationStation", () => {
       expect(subject).toMatchSnapshot();
     });
   });
-
-  describe("#search", () => {
-    describe("when name is not found", () => {
-      it("renders a ThankYouCard component", () => {
-        subject.find("form").simulate("submit", { preventDefault: jest.fn() });
-        expect(subject).toMatchSnapshot();
-        expect(subject.find("strong")).toHaveLength(1);
-      });
-    });
-  });
 });
