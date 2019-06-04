@@ -8,7 +8,10 @@ exports[`ThankYouCard #render matches snapshot 1`] = `
     <div
       className="ThankYouCard"
     >
-      <canvas />
+      <canvas
+        aria-label="You’re the best mentor, Test member 1!"
+        role="img"
+      />
     </div>
   </div>
   <div>

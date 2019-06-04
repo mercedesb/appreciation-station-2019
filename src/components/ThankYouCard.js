@@ -206,7 +206,11 @@ export default class ThankYouCard extends Component {
         <div className="ThankYouCardContainer">
           {this.props.prevArrow()}
           <div className="ThankYouCard">
-            <canvas ref={this.canvasRef} />
+            <canvas
+              ref={this.canvasRef}
+              aria-label={this.getCanvasMessage()}
+              role="img"
+            />
           </div>
           {this.props.nextArrow()}
         </div>

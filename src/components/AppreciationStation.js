@@ -73,7 +73,7 @@ export default function AppreciationStation({ thankYous }) {
               onChange={e => setSearchName(e.target.value)}
             />
           </label>
-          <button type="submit" className="SearchButton">
+          <button type="submit" className="SearchButton" data-testid="submit">
             Search
           </button>
         </form>
