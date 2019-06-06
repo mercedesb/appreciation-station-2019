@@ -106,26 +106,78 @@ export const AppreciationStationConfig = (function() {
 
   return {
     getMembers: function() {
-      return getConfig().then(config => {
-        return config.members;
-      });
+      if (process.env.NODE_ENV !== "production") {
+        return Promise.resolve([
+          {
+            name: "Test mentor",
+            isMentor: true
+          },
+          {
+            name: "Test mentee",
+            isMentee: true
+          },
+          {
+            name: "Test speaker",
+            isSpeaker: true
+          },
+          {
+            name: "Test sponsor",
+            isSponsor: true
+          }
+        ]);
+      } else {
+        return getConfig().then(config => {
+          return config.members;
+        });
+      }
     },
     getMemberMessages: function() {
-      return getConfig().then(config => {
-        return config.memberMessages;
-      });
+      if (process.env.NODE_ENV !== "production") {
+        return Promise.resolve([
+          {
+            text: "Thank you {NAME} for being great!",
+            isMentor: true,
+            isMentee: true,
+            isSpeaker: true,
+            isSponsor: true
+          },
+          {
+            text: "We appreciate you {NAME}!",
+            isMentor: true,
+            isMentee: true,
+            isSpeaker: true,
+            isSponsor: true
+          }
+        ]);
+      } else {
+        return getConfig().then(config => {
+          return config.memberMessages;
+        });
+      }
     },
     getBackgroundImages: function() {
-      return getConfig().then(config => {
-        return config.backgroundImages.map(img => {
-          const { image, ...otherFields } = img.fields;
-          return {
-            id: img.sys.id,
-            ...image.fields,
-            ...otherFields
-          };
+      if (process.env.NODE_ENV !== "production") {
+        return Promise.resolve([
+          {
+            file: {
+              url: "http://testurl1.com"
+            },
+            maxTextWidth: 0.75,
+            textPosition: "topLeft"
+          }
+        ]);
+      } else {
+        return getConfig().then(config => {
+          return config.backgroundImages.map(img => {
+            const { image, ...otherFields } = img.fields;
+            return {
+              id: img.sys.id,
+              ...image.fields,
+              ...otherFields
+            };
+          });
         });
-      });
+      }
     },
     uploadImage: function(imgDataURL, fileName) {
       return upload(imgDataURL, fileName).then(asset => {
