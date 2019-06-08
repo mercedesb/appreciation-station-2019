@@ -198,6 +198,7 @@ export default class ThankYouCard extends Component {
           {this.props.nextArrow()}
         </div>
         <div>
+          {/*  eslint-disable-next-line */}
           <a
             className="Share Button"
             href="#"
