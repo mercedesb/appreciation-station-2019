@@ -22,66 +22,6 @@ function getEntries(query) {
     });
 }
 
-function upload(imgDataURL, fileName) {
-  const mgmtClient = require("contentful-management").createClient({
-    accessToken: process.env.REACT_APP_CMA_TOKEN
-  });
-
-  const contentType = "image/png";
-
-  return mgmtClient.getSpace(process.env.REACT_APP_SPACE_ID).then(space => {
-    return space
-      .getEnvironment("master")
-      .then(environment => {
-        return environment
-          .createUpload({
-            file: dataURLToBlob(imgDataURL),
-            contentType,
-            fileName
-          })
-          .then(upload => {
-            return space
-              .createAsset({
-                fields: {
-                  title: {
-                    "en-US": fileName
-                  },
-                  file: {
-                    "en-US": {
-                      fileName: fileName,
-                      contentType: contentType,
-                      uploadFrom: {
-                        sys: {
-                          type: "Link",
-                          linkType: "Upload",
-                          id: upload.sys.id
-                        }
-                      }
-                    }
-                  }
-                }
-              })
-              .then(asset => asset.processForLocale("en-US"))
-              .then(asset => asset.publish())
-              .then(asset => asset);
-          });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  });
-}
-
-function dataURLToBlob(dataURL) {
-  var byteString = atob(dataURL.split(",")[1]);
-  var ab = new ArrayBuffer(byteString.length);
-  var ia = new Uint8Array(ab);
-  for (var i = 0; i < byteString.length; i++) {
-    ia[i] = byteString.charCodeAt(i);
-  }
-  return new Blob([ab], { type: "image/png" });
-}
-
 function isEmpty(obj) {
   for (var key in obj) {
     if (obj.hasOwnProperty(key)) return false;
@@ -178,14 +118,6 @@ export const AppreciationStationConfig = (function() {
           });
         });
       }
-    },
-    uploadImage: function(imgDataURL, fileName) {
-      return upload(imgDataURL, fileName).then(asset => {
-        return {
-          id: asset.sys.id,
-          ...asset.fields
-        };
-      });
     }
   };
 })();

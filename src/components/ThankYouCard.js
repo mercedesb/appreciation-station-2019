@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { AppreciationStationConfig } from "../lib/data";
 
 const CANVAS_CONFIG = {
   breakPoint: 720,
@@ -182,21 +181,10 @@ export default class ThankYouCard extends Component {
     this.drawText(context, width, height);
   };
 
-  share = () => {
+  download = e => {
     const canvas = this.canvasRef.current;
     const imgData = canvas.toDataURL("png");
-    const fileName = `Thank you ${
-      this.props.member.name
-    }! - ${new Date().toISOString()}`;
-
-    AppreciationStationConfig.uploadImage(imgData, fileName).then(asset => {
-      const imageUrl = asset.file["en-US"].url;
-      console.log(imageUrl);
-      window.open(
-        `https://twitter.com/intent/tweet?&amp;text=Thank you from Dev Together! \n\nhttp:${imageUrl}`,
-        "_blank"
-      );
-    });
+    e.target.href = imgData;
   };
 
   render() {
@@ -210,9 +198,16 @@ export default class ThankYouCard extends Component {
           {this.props.nextArrow()}
         </div>
         <div>
-          <button className="Share" onClick={this.share}>
-            Share on Twitter
-          </button>
+          <a
+            className="Share Button"
+            href="#"
+            onClick={this.download}
+            download={`Thank you ${
+              this.props.member.name
+            }! - ${new Date().toISOString()}.png`}
+          >
+            Download
+          </a>
         </div>
       </React.Fragment>
     );
