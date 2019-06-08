@@ -193,7 +193,11 @@ export default class ThankYouCard extends Component {
         <div className="ThankYouCardContainer">
           {this.props.prevArrow()}
           <div className="ThankYouCard">
-            <canvas ref={this.canvasRef} />
+            <canvas
+              ref={this.canvasRef}
+              aria-label={this.getCanvasMessage()}
+              role="img"
+            />
           </div>
           {this.props.nextArrow()}
         </div>
@@ -203,9 +207,7 @@ export default class ThankYouCard extends Component {
             className="Share Button"
             href="#"
             onClick={this.download}
-            download={`Thank you ${
-              this.props.member.name
-            }! - ${new Date().toISOString()}.png`}
+            download={`Thank you ${this.props.member.name}!.png`}
           >
             Download
           </a>
