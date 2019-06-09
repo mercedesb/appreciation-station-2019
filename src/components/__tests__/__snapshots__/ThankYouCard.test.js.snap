@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThankYouCard #render matches snapshot 1`] = `
+<Fragment>
+  <div
+    className="ThankYouCardContainer"
+  >
+    <div
+      className="ThankYouCard"
+    >
+      <canvas
+        aria-label="Thank you for being a great mentor, Test mentor!"
+        role="img"
+      />
+    </div>
+  </div>
+  <div>
+    <a
+      className="Share Button"
+      download="Thank you Test mentor!.png"
+      href="#"
+      onClick={[Function]}
+    >
+      Download
+    </a>
+  </div>
+</Fragment>
+`;

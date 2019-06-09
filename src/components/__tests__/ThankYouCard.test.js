@@ -23,3 +23,20 @@ let testBgdImage = {
 let subject;
 let renderPrevArrow = jest.fn();
 let renderNextArrow = jest.fn();
+
+describe("ThankYouCard", () => {
+  describe("#render", () => {
+    it("matches snapshot", () => {
+      subject = shallow(
+        <ThankYouCard
+          member={testMember}
+          message={testMessage}
+          backgroundImage={testBgdImage}
+          prevArrow={renderPrevArrow}
+          nextArrow={renderNextArrow}
+        />
+      );
+      expect(subject).toMatchSnapshot();
+    });
+  });
+});
