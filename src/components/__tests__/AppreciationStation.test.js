@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup } from "@testing-library/react";
+import { render, fireEvent, cleanup } from "@testing-library/react";
 
 import AppreciationStation from "../AppreciationStation";
 
@@ -73,6 +73,36 @@ describe("AppreciationStation", () => {
       );
 
       const thankYouCanvas = getByLabelText(/thank you test member/i);
+      expect(thankYouCanvas).not.toBeNull();
+    });
+  });
+
+  describe("clicking next", () => {
+    it("displays the next thank you card", () => {
+      const { getByLabelText, getByAltText } = render(
+        <AppreciationStation thankYous={mockThankYous} />
+      );
+
+      const nextButton = getByAltText(/go to next/i);
+      fireEvent.click(nextButton);
+
+      const thankYouCanvas = getByLabelText(/thank you test member 2/i);
+      expect(thankYouCanvas).not.toBeNull();
+    });
+  });
+
+  describe("clicking prev", () => {
+    it("displays the prev thank you card", () => {
+      const { getByLabelText, getByAltText } = render(
+        <AppreciationStation thankYous={mockThankYous} />
+      );
+
+      const nextButton = getByAltText(/go to next/i);
+      const prevButton = getByAltText(/go to prev/i);
+      fireEvent.click(nextButton);
+      fireEvent.click(prevButton);
+
+      const thankYouCanvas = getByLabelText(/thank you test member 1/i);
       expect(thankYouCanvas).not.toBeNull();
     });
   });
