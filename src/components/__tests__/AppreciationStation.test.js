@@ -106,4 +106,62 @@ describe("AppreciationStation", () => {
       expect(thankYouCanvas).not.toBeNull();
     });
   });
+
+  describe("#search", () => {
+    let input;
+    let submitButton;
+    let getByLabelText;
+    let getByText;
+
+    beforeEach(() => {
+      const rendered = render(
+        <AppreciationStation thankYous={mockThankYous} />
+      );
+      getByLabelText = rendered.getByLabelText;
+      getByText = rendered.getByText;
+
+      input = getByLabelText(/search/i);
+      submitButton = rendered.getByTestId(/submit/i);
+    });
+
+    describe("when the exact name exists", () => {
+      it("renders the correct thank you card", () => {
+        fireEvent.change(input, { target: { value: "Test member 3" } });
+        fireEvent.click(submitButton);
+
+        const thankYouCanvas = getByLabelText(/thank you test member 3/i);
+        expect(thankYouCanvas).not.toBeNull();
+      });
+    });
+
+    describe("when a close match name exists", () => {
+      it("renders the correct thank you card", () => {
+        fireEvent.change(input, { target: { value: "member 3" } });
+        fireEvent.click(submitButton);
+
+        const thankYouCanvas = getByLabelText(/thank you test member 3/i);
+        expect(thankYouCanvas).not.toBeNull();
+      });
+    });
+
+    describe("when the exact name exists with a different case", () => {
+      it("renders the correct thank you card", () => {
+        fireEvent.change(input, { target: { value: "test MemBer 3" } });
+        fireEvent.click(submitButton);
+
+        const thankYouCanvas = getByLabelText(/thank you test member 3/i);
+        expect(thankYouCanvas).not.toBeNull();
+      });
+    });
+
+    describe("when the name does not exist", () => {
+      it("renders the error message", () => {
+        fireEvent.change(input, { target: { value: "nonexistent" } });
+        fireEvent.click(submitButton);
+
+        const errorMessage = getByText(/whoops/i);
+        expect(errorMessage).not.toBeNull();
+      });
+    });
+  });
 });
