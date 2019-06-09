@@ -109,4 +109,66 @@ describe("ThankYouCard", () => {
       });
     });
   });
+
+  describe("Other example unit tests", () => {
+    describe("#getTextStyleConfig", () => {
+      it("returns an object with the correct shape", () => {
+        const width = 200;
+        const config = subject.instance().getTextStyleConfig(width);
+        expect(config).toEqual(
+          expect.objectContaining({
+            fontSize: expect.any(Number),
+            lineHeight: expect.any(Number),
+            horizontalSpacing: expect.any(Number),
+            verticalSpacing: expect.any(Number),
+            maxWidth: expect.any(Number),
+            font: expect.any(String),
+            fillStyle: expect.any(String)
+          })
+        );
+      });
+    });
+
+    // Using the `toBeInstanceOf()` Jest matcher
+    describe("#createImageForCanvas", () => {
+      it("returns an instance of Image", () => {
+        expect(subject.instance().createImageForCanvas()).toBeInstanceOf(Image);
+      });
+    });
+
+    // Using the `stringContaining()` Jest matcher
+    describe("#setImageSrc", () => {
+      it("updates the src of the imageRef with the value from the prop", () => {
+        subject.instance().setImageSrc();
+        expect(subject.instance().imageRef.current.src).toEqual(
+          expect.stringContaining(testBgdImage.file.url)
+        );
+      });
+    });
+
+    // Using the `toHaveBeenCalledWith()` Jest matcher
+    // This is not a great unit test because it is testing implementation details
+    // It is provided as an example because there are times when this can be helpful.
+    describe("#drawBackgroundImage", () => {
+      it("draws an image on the canvas context", () => {
+        // in order to test if a function has been called, it needs to be a Jest
+        // mock function. Here is how you can mock out a function.
+        let context = {
+          drawImage: jest.fn()
+        };
+        const width = 200;
+        const height = 100;
+
+        subject.instance().drawBackgroundImage(context, width, height);
+
+        expect(context.drawImage).toHaveBeenCalledWith(
+          expect.any(Object),
+          0,
+          0,
+          width,
+          height
+        );
+      });
+    });
+  });
 });
