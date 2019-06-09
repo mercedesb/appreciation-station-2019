@@ -100,7 +100,24 @@ export const AppreciationStationConfig = (function() {
         return Promise.resolve([
           {
             file: {
-              url: "http://testurl1.com"
+              url:
+                "http://images.ctfassets.net/t65vqlj7oyyj/36Pp1Px6xwOM6vl7dm98N4/7545cffb2e266802094b0bf2a684bce2/composition2-graphics3.png"
+            },
+            maxTextWidth: 0.75,
+            textPosition: "topLeft"
+          },
+          {
+            file: {
+              url:
+                "http://images.ctfassets.net/t65vqlj7oyyj/6VvPyHFbwgmqeF2cOfKY1y/8d4c681921f021be6c702f4a4377a575/composition2-graphics4.png"
+            },
+            maxTextWidth: 0.75,
+            textPosition: "topLeft"
+          },
+          {
+            file: {
+              url:
+                "http://images.ctfassets.net/t65vqlj7oyyj/6kBL6Sl0tEbi73oNXdoZvD/33be989ec31459ddfd2a6c584e8f5c2b/composition2-graphics5.png"
             },
             maxTextWidth: 0.75,
             textPosition: "topLeft"
