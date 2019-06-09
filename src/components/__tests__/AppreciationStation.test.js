@@ -64,3 +64,16 @@ const mockThankYous = [
 
 // automatically unmount and cleanup DOM after the test is finished.
 afterEach(cleanup);
+
+describe("AppreciationStation", () => {
+  describe("#render", () => {
+    it("renders a thank you card by default", () => {
+      const { getByLabelText } = render(
+        <AppreciationStation thankYous={mockThankYous} />
+      );
+
+      const thankYouCanvas = getByLabelText(/thank you test member/i);
+      expect(thankYouCanvas).not.toBeNull();
+    });
+  });
+});
