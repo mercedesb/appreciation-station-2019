@@ -26,33 +26,33 @@ export default function AppreciationStation({ thankYous }) {
   function renderPrevArrow() {
     const isHiddenClassName =
       currentVisibleThankYouIndex <= 0 ? "is-hidden" : "";
-    const className = `Prev is-clickable ${isHiddenClassName}`;
+    const className = `Prev ${isHiddenClassName}`;
 
     return (
-      <img
-        src={PreviousNextArrow}
+      <button
         className={className}
         onClick={() =>
           setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex - 1)
         }
-        alt="Go to previous thank you card"
-      />
+      >
+        <img src={PreviousNextArrow} alt="Go to previous thank you card" />
+      </button>
     );
   }
 
   function renderNextArrow() {
     const isHiddenClassName =
       currentVisibleThankYouIndex >= thankYous.length - 1 ? "is-hidden" : "";
-    const className = `Next is-clickable ${isHiddenClassName}`;
+    const className = `Next ${isHiddenClassName}`;
     return (
-      <img
-        src={PreviousNextArrow}
+      <button
         className={className}
         onClick={() =>
           setCurrentVisibleThankYouIndex(currentVisibleThankYouIndex + 1)
         }
-        alt="Go to next thank you card"
-      />
+      >
+        <img src={PreviousNextArrow} alt="Go to next thank you card" />
+      </button>
     );
   }
 

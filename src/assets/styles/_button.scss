@@ -1,5 +1,9 @@
 button,
-input[type="button"],
+input[type="button"] {
+  border: none;
+  padding: 0;
+}
+
 .Button {
   background-color: $accent-green;
   color: $white;
