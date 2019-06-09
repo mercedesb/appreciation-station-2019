@@ -1,3 +1,56 @@
+# Dev Together's Appreciation Station 2019
+
+The goal of this project is to serve as a public token of appreciation for everyone's involvement in our community over the last year as well
+as a learning tool at our 1-year anniversary celebration.
+
+It is a simple one page website built with React. We tried to limit the dependencies as much as possible.
+
+We will be using this project to facilitate a unit testing and Heroku deployment workshop.
+
+## Built with
+
+- [React](https://reactjs.org/)
+- [Jest](https://jestjs.io/docs/en/getting-started)
+- [Enzyme](https://airbnb.io/enzyme/)
+- [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)
+- [Contentful](https://www.contentful.com/developers/docs/javascript/) (CMS used for hosting assets)
+- [Node SASS](https://github.com/sass/node-sass) (so we can use SASS instead of vanilla CSS for styling)
+
+## Setup
+
+We use yarn as our package manager. Feel free to use npm if that is your preference. See [WorkshopEnvironmentSetup.md](/docs/WorkshopEnvironmentSetup.md) if you don't have Yarn but would instructions to install it.
+
+To set up project, **fork [the appreciation station project]( https://github.com/mercedesb/appreciation-station-2019) into your own Github profile.**
+
+Then clone your repo locally.
+
+```
+git clone https://github.com/[YOUR_USERNAME]/appreciation-station-2019.git
+
+cd appreciation-station-2019
+
+yarn
+```
+
+## Workshop Details
+
+Documentation for the workshop can be found in the [`docs` directory of this repo](/docs).
+
+- [Environment setup for the workshop](/docs/WorkshopEnvironmentSetup.md)
+
+### Branches
+
+We know that following along during live coding can be challenging. If you fall behind, don't worry. We have created branches for each transition in the workshop. They follow the naming convention `STEP_NUMBER-description`. 
+
+To checkout a branch to get caught up, run the following command
+```
+git checkout BRANCH_NAME
+```
+
+<hr/><hr/>
+
+## Default documenation from Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
