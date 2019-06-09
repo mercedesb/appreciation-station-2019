@@ -59,4 +59,54 @@ describe("ThankYouCard", () => {
       expect(canvas.height).toEqual(height);
     });
   });
+
+  describe("#getCanvasMessage", () => {
+    describe("when the token {NAME} is present in the message text", () => {
+      beforeEach(() => {
+        testMessage = {
+          text: "Thank you for being a great mentor, {NAME}!",
+          isMentor: true
+        };
+
+        loadSubject({ message: testMessage });
+      });
+
+      it("replaces the {NAME} token", () => {
+        const actual = subject.instance().getCanvasMessage();
+        expect(actual).not.toEqual(expect.stringContaining("{NAME}"));
+        expect(actual).toEqual(expect.stringContaining(testMember.name));
+      });
+    });
+
+    describe("when an apostrophe is present in the message text", () => {
+      beforeEach(() => {
+        testMessage = {
+          text: "You're the best!",
+          isMentor: true
+        };
+
+        loadSubject({ message: testMessage });
+      });
+
+      it("replaces any apostrophes with actual single quote", () => {
+        const actual = subject.instance().getCanvasMessage();
+        expect(actual).not.toEqual(expect.stringContaining("'"));
+        expect(actual).toEqual(expect.stringContaining("’"));
+      });
+    });
+
+    describe("when no reserved tokens are present in the message text", () => {
+      beforeEach(() => {
+        testMessage = {
+          text: "Thanks a bunch!"
+        };
+        loadSubject({ message: testMessage });
+      });
+
+      it("returns the string as-is", () => {
+        const actual = subject.instance().getCanvasMessage();
+        expect(actual).toEqual(testMessage.text);
+      });
+    });
+  });
 });
