@@ -24,18 +24,26 @@ let subject;
 let renderPrevArrow = jest.fn();
 let renderNextArrow = jest.fn();
 
+function loadSubject(props = {}) {
+  subject = shallow(
+    <ThankYouCard
+      member={testMember}
+      message={testMessage}
+      backgroundImage={testBgdImage}
+      prevArrow={renderPrevArrow}
+      nextArrow={renderNextArrow}
+      {...props}
+    />
+  );
+}
+
 describe("ThankYouCard", () => {
+  beforeEach(() => {
+    loadSubject();
+  });
+
   describe("#render", () => {
     it("matches snapshot", () => {
-      subject = shallow(
-        <ThankYouCard
-          member={testMember}
-          message={testMessage}
-          backgroundImage={testBgdImage}
-          prevArrow={renderPrevArrow}
-          nextArrow={renderNextArrow}
-        />
-      );
       expect(subject).toMatchSnapshot();
     });
   });
