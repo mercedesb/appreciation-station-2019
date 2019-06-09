@@ -47,4 +47,16 @@ describe("ThankYouCard", () => {
       expect(subject).toMatchSnapshot();
     });
   });
+
+  describe("#setCanvasSize", () => {
+    it("updates the canvas width and height", () => {
+      let canvas = {};
+      const width = 200;
+      const height = 100;
+
+      subject.instance().setCanvasSize(canvas, width, height);
+      expect(canvas.width).toEqual(width);
+      expect(canvas.height).toEqual(height);
+    });
+  });
 });
