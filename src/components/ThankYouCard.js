@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 
 const CANVAS_CONFIG = {
-  breakPoint: 720,
-  smallFontSize: 24,
+  smallBreakPoint: 400,
+  medBreakPoint: 720,
+  smallFontSize: 12,
+  medFontSize: 24,
   largeFontSize: 48,
   lineSpacing: 10,
   smallSpacing: 20,
@@ -89,20 +91,24 @@ export default class ThankYouCard extends Component {
   };
 
   getTextStyleConfig = width => {
-    const fontSize =
-      width < CANVAS_CONFIG.breakPoint
-        ? CANVAS_CONFIG.smallFontSize
-        : CANVAS_CONFIG.largeFontSize;
+    let fontSize;
+    if (width < CANVAS_CONFIG.smallBreakPoint) {
+      fontSize = CANVAS_CONFIG.smallFontSize;
+    } else if (width < CANVAS_CONFIG.medBreakPoint) {
+      fontSize = CANVAS_CONFIG.medFontSize;
+    } else {
+      fontSize = CANVAS_CONFIG.largeFontSize;
+    }
 
     const lineHeight = fontSize + CANVAS_CONFIG.lineSpacing;
 
     const horizontalSpacing =
-      width < CANVAS_CONFIG.breakPoint
+      width < CANVAS_CONFIG.medBreakPoint
         ? CANVAS_CONFIG.smallSpacing
         : CANVAS_CONFIG.largeSpacing;
 
     const verticalSpacing =
-      width < CANVAS_CONFIG.breakPoint
+      width < CANVAS_CONFIG.medBreakPoint
         ? CANVAS_CONFIG.smallSpacing
         : CANVAS_CONFIG.largeSpacing;
 

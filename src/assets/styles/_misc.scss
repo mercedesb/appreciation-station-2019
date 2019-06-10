@@ -1,3 +1,25 @@
+.Pause {
+  border: 1px solid $white;
+  background-color: $dark-green;
+  color: $white;
+  font-size: $small-font-size;
+
+  position: absolute;
+  padding: $small-spacing / 2 $base-spacing / 4;
+
+  top: 25px;
+  right: $small-spacing;
+
+  @include media($min-tablet) {
+    padding: $small-spacing / 2 $base-spacing / 2;
+  }
+
+  @include media($min-desktop) {
+    top: 50px;
+    right: $large-spacing;
+  }
+}
+
 .Confetti {
   display: none;
 

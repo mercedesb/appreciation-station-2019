@@ -161,14 +161,6 @@ $column-gap: 40px;
       margin-top: $large-spacing;
     }
   }
-
-  .Button {
-    margin-top: $base-mobile-spacing;
-
-    @include media($min-desktop) {
-      margin-top: $base-spacing;
-    }
-  }
 }
 
 .BackgroundHeading {

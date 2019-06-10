@@ -52,13 +52,17 @@ export default function ThankYouLetter() {
               support during our inception
             </li>
             <li>
+              Cristina Ruth - thank you for sharing this vision and running
+              things in Madison
+            </li>
+            <li>
               Doug Bell, Keanan Koppenhaver, Anish Krishnan, and Mat Biscan -
               thank you for being always willing to lend a hand wherever its
               needed
             </li>
             <li>
-              Mina Slater - thank you for listening and vetting all of my crazy
-              ideas
+              Mina Slater - thank you for listening and vetting all of my
+              ridiculous ideas
             </li>
             <li>
               Alé Salinas - thank you for your amazing design work and all of

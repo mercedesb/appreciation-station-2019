@@ -99,9 +99,10 @@ Enzyme is really powerful and ships with many many utility methods to make testi
 
 ## Workshop Activity: Using Enzyme to test Class Components
 
-Checkout branch `2a-test-with-enzyme`. This branch already has Enzyme installed and configured and some boilerplate code in our first test file to save us some typing time.
+Checkout branch `2a-test-with-enzyme` and run `yarn`. This branch already has Enzyme installed and configured and some boilerplate code in our first test file to save us some typing time.
 ```
 git checkout 2a-test-with-enzyme
+yarn
 ```
 
 Let's write our first snapshot test using Enzyme's shallow rendering. Shallow rendering will not render child components and is useful to ensure that your tests aren't relying on the behavior of the component's children. 
@@ -172,9 +173,10 @@ React Testing Library's main goal is to help you write maintainable tests for yo
 
 ## Workshop Activity: React Testing Library & Functional Components
 
-Checkout branch `3a-test-with-react-testing-library`. This branch already has React Testing Library installed and some boilerplate code in our first test file to save us typing time.
+Checkout branch `3a-test-with-react-testing-library` and run `yarn`. This branch already has React Testing Library installed and some boilerplate code in our first test file to save us typing time.
 ```
 git checkout 3a-test-with-react-testing-library
+yarn
 ```
 
 Let's write our first render test using React Testing Library's render method. We want to test that the AppreciationStation component renders a ThankYouCard by default.
